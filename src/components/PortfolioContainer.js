@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
@@ -16,7 +16,7 @@ class PortfolioClass extends Component {
 
   renderPage = () => {
     if (this.state.currentPage === "Home") {
-      return <Home />;
+      return <Home/>;
     } else if (this.state.currentPage === "Portfolio") {
       return <Portfolio />;
     } else if (this.state.currentPage === "Contact") {
