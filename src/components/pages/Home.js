@@ -3,17 +3,26 @@ import localVideo from '../assets/Portfolio-Video.mp4'
 import myImage from '../assets/My-Img.jpeg'
 
 
+// function pauseVid(){
+//     let video = document.querySelector(".video-main")
+//     video.addEventListener("timeupdate", function(){
+//       if(this.currentTime === 2) {
+//           this.pause();
+//       }
+//   });
+
+// }
 
 const Home = (props) => (
   
   <>
-    <section>
+    <section >
         <div className="parallax"></div>
         <div className="centered">Hello, my name is Mohmed Vaid.</div>
 
-        <div className="vid-img-container">
-        <div className="video">
-            <video autoPlay muted loop style={{width: "100%", height: "100%"}}> 
+        <div  className="vid-img-container">
+        <div   className="video">
+            <video  autoPlay muted loop style={{width: "100%", height: "100%"}} className="video-main"> 
             <source src={localVideo} type="video/mp4"/>
             </video>
         </div>

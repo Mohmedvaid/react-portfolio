@@ -14,9 +14,11 @@ class PortfolioClass extends Component {
     this.setState({ currentPage: page });
   };
 
+
   renderPage = () => {
     if (this.state.currentPage === "Home") {
-      return <Home/>;
+      return <Home
+      />;
     } else if (this.state.currentPage === "Portfolio") {
       return <Portfolio />;
     } else if (this.state.currentPage === "Contact") {
