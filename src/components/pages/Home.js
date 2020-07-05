@@ -31,8 +31,8 @@ const Home = (props) => (
         <div className ="myImg-container">
           <img className="about-img"src={myImage} alt="My image" />
           <div className="overlay">
-            <div className="text img-hover-txt">
-           <p> <div className="text-code">&lt;head&gt;</div>coder: 50%;<br/> entrepreneur: 50%;<br/> <div className="text-code"> &lt;/head&gt;</div>  </p> 
+            <div className="text">
+           <p> <div className="text-code">&lt;head&gt;</div>coder: 50%;<br/> entrepreneur: 50%;<br/> <div className="text-code"> &lt;/head&gt;</div></p> 
            <p><div className="text-code">&lt;body&gt;<br/></div> baseball: 75%;<br/> gym: 25%;<br/> <div className="text-code"> &lt;/body&gt;</div></p>
             </div>
           </div>

@@ -118,10 +118,6 @@ a.nav-link {
     color: #5b4cff;
 }
 
-.img-hover-txt{
-    text-align: left !important;
-}
-
 .myImg-container:hover .overlay {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -132,7 +128,7 @@ a.nav-link {
 
 .text {
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -140,6 +136,7 @@ a.nav-link {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    text-align: left
 }
 
 .heading{

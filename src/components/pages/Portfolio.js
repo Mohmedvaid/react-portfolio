@@ -21,14 +21,13 @@ const Portfolio = () => (
           </div>
         <div className="card-reveal">
           <Card.Body>
-              <Card.Title>Card Title <i className="material-icons right">close</i></Card.Title>
+              <Card.Title>Password Generator <i className="material-icons right">close</i></Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                A simple app that generates passwords for user according to the specifications
               </Card.Text>
               <div className="card-buttons">
-                <Button className="card-btn" variant="primary">Live</Button>
-                <Button className="card-btn" variant="primary">Github</Button>
+                <Button href="https://mohmedvaid.github.io/homework3/Develop/" className="card-btn" variant="primary">Live</Button>
+                <Button href="https://github.com/Mohmedvaid/homework3/tree/master/Develop" className="card-btn" variant="primary">Github</Button>
               </div>
           </Card.Body>
         </div>
@@ -37,19 +36,18 @@ const Portfolio = () => (
     <Card className="card" style={cardSize}>
       <Card.Img variant="top" src={weartherImg} />
           <div className="card-content">
-            <span className="card-title activator grey-text text-darken-4">The Shaker<i
+            <span className="card-title activator grey-text text-darken-4">Weather App<i
                 className="material-icons right">more_vert</i></span>
           </div>
         <div className="card-reveal">
           <Card.Body>
-              <Card.Title>Card Title <i className="material-icons right">close</i></Card.Title>
+              <Card.Title>Weather App <i className="material-icons right">close</i></Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Before you step out make sure to checkout the weather app! You might need an umbrella:)
               </Card.Text>
               <div className="card-buttons">
-                <Button className="card-btn" variant="primary">Live</Button>
-                <Button className="card-btn" variant="primary">Github</Button>
+                <Button href="https://mohmedvaid.github.io/weather-app/" className="card-btn" variant="primary">Live</Button>
+                <Button href="https://github.com/Mohmedvaid/weather-app" className="card-btn" variant="primary">Github</Button>
               </div>
           </Card.Body>
         </div>
@@ -63,14 +61,13 @@ const Portfolio = () => (
           </div>
         <div className="card-reveal">
           <Card.Body>
-              <Card.Title>Card Title <i className="material-icons right">close</i></Card.Title>
+              <Card.Title>The Shaker<i className="material-icons right">close</i></Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                An app to help you find the perfect drink.
               </Card.Text>
               <div className="card-buttons">
-                <Button className="card-btn" variant="primary">Live</Button>
-                <Button className="card-btn" variant="primary">Github</Button>
+                <Button href="https://json-d3rulo.github.io/project-1/" className="card-btn" variant="primary">Live</Button>
+                <Button href="https://github.com/JSON-D3RULO/project-1" className="card-btn" variant="primary">Github</Button>
               </div>
           </Card.Body>
         </div>
