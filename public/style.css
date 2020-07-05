@@ -127,6 +127,7 @@ a.nav-link {
     font-family: 'Audiowide', cursive;
     font-size: 60px;
     padding: 20px;
+    text-align: center;
 }
 .aboutme{
     text-align: center;
@@ -136,11 +137,29 @@ a.nav-link {
     padding-left: 30px;
     padding-right: 30px;
 }
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+.card-btn{
+    margin: 5px;
+}
 
 .cta{
     text-align: center;
     font-size: 60px;
     font-family: 'Audiowide', cursive;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 15px;
 }
 
 @media only screen and (max-width: 600px) {
