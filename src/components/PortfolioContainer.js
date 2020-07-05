@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import NavBar2 from './ NavBar2'
+import NavBar from './ NavBar'
 
 class PortfolioClass extends Component {
   state = {
@@ -26,22 +26,22 @@ class PortfolioClass extends Component {
     } else if (this.state.currentPage === "Contact") {
       return <Contact />;
     } else {
-      return <Contact />;
+      return <Home />;
     }
   };
 
   render() {
     return (
-      <>
-        <NavBar2
+      <div>
+        <NavBar
         currentPage={this.state.currentPage}
         handleChange={this.handleChange}
         />
-        <div 
+        <div
           className="main">
          {this.renderPage()}
         </div>
-      </>
+      </div>
     );
   }
 }

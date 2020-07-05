@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Nav} from 'react-bootstrap';
 
-function Navbar2(props) {
+function NavBar(props) {
 
   let logo = document.querySelector('a.logo.nav-brand');
 
@@ -36,4 +36,4 @@ window.onResize = function() {
     )
 }
 
-export default Navbar2;
+export default NavBar;

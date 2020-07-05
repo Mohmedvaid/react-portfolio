@@ -29,7 +29,7 @@ const Home = (props) => (
         </div>
         
         <div className ="myImg-container">
-          <img className="about-img"src={myImage} alt="My image" />
+          <img className="about-img"src={myImage} alt="Mohmed vaid Profile " />
           <div className="overlay">
             <div className="text">
            <p> <div className="text-code">&lt;head&gt;</div>coder: 50%;<br/> entrepreneur: 50%;<br/> <div className="text-code"> &lt;/head&gt;</div></p> 
@@ -46,8 +46,8 @@ const Home = (props) => (
 
         <div className="cta">
           <p>Checkout My Latest Projects</p>
-          <Button onClick={()=> props.handleChange("Portfolio")} style={{ width: "100%", height: "100px"}} variant="secondary" size="lg">
-              My Projects
+          <Button className="projects-btn" onClick={()=> props.handleChange("Portfolio")} style={{fontSize:"30px", width: "100%", height: "100px"}} variant="secondary" size="lg">
+              Click Here!
          </Button>
         </div>
       </section>

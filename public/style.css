@@ -1,5 +1,4 @@
 
-
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
     a.logo {
@@ -203,6 +202,25 @@ a.nav-link {
 
 .resume-icon, .linkedin-icon, .github-icon{
     margin: 5px;
+}
+
+.footer-heading{
+    color: black;
+    text-align: center;
+    font-size: 35px;
+}
+
+.main-container-body{
+    position: relative;
+    min-height: 100vh;
+}
+
+.projects-btn{
+    font-size: 100px;
+}
+
+.page{
+    padding-bottom: 2.5rem;
 }
 
 @media only screen and (max-width: 600px) {

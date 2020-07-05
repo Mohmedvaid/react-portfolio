@@ -1,4 +1,5 @@
 import React from "react";
+import resume from '../assets/My-resume-v1.0.pdf'
 
 const Contact = () => (
   <div>
@@ -18,7 +19,7 @@ const Contact = () => (
       <div className="social-media">
           <p className="form-label">Social Media</p>
           <div className="social-icons">
-              <a style={{color:"lightslategrey"}} href="./Assets/My-resume-v1.0.pdf"><i className="far fa-file fa-3x resume-icon" aria-hidden="true"></i></a>
+              <a style={{color:"lightslategrey"}} href={resume}><i className="far fa-file fa-3x resume-icon" aria-hidden="true"></i></a>
               <a style={{color:"lightslategrey"}} href="https://www.linkedin.com/in/mohmedhusain-v-0374b2128/"><i className="fab fa-linkedin fa-3x linkedin-icon" aria-hidden="true"></i></a>
               <a style={{color:"lightslategrey"}} href="https://github.com/Mohmedvaid/"><i className="fab fa-github-square fa-3x github-icon" aria-hidden="true"></i></a>
           </div>
