@@ -14,11 +14,11 @@ window.onResize = function() {
     return ( 
         <>
           <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark-4" variant="dark">
-            <Navbar.Brand href="#home" className="logo">MV</Navbar.Brand>
+            <Navbar.Brand onClick={()=> props.handleChange("Home")} href="#Home" className="logo">MV</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="navLinks">
               <Nav className="ml-auto">
-                <Nav.Link href="#"
+                <Nav.Link href="#Home"
                 onClick={()=> props.handleChange("Home")}
                 >Home</Nav.Link>
 

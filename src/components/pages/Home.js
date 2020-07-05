@@ -1,6 +1,7 @@
 import React from "react";
 import localVideo from '../assets/Portfolio-Video.mp4'
 import myImage from '../assets/My-Img.jpeg'
+import { Button } from 'react-bootstrap';
 
 
 // function pauseVid(){
@@ -30,7 +31,10 @@ const Home = (props) => (
         <div className ="myImg-container">
           <img className="about-img"src={myImage} alt="My image" />
           <div className="overlay">
-            <div className="text">Hello World</div>
+            <div className="text img-hover-txt">
+           <p> <div className="text-code">&lt;head&gt;</div>coder: 50%;<br/> entrepreneur: 50%;<br/> <div className="text-code"> &lt;/head&gt;</div>  </p> 
+           <p><div className="text-code">&lt;body&gt;<br/></div> baseball: 75%;<br/> gym: 25%;<br/> <div className="text-code"> &lt;/body&gt;</div></p>
+            </div>
           </div>
         </div>
 
@@ -42,6 +46,9 @@ const Home = (props) => (
 
         <div className="cta">
           <p>Checkout My Latest Projects</p>
+          <Button onClick={()=> props.handleChange("Portfolio")} style={{ width: "100%", height: "100px"}} variant="secondary" size="lg">
+              My Projects
+         </Button>
         </div>
       </section>
   </>
