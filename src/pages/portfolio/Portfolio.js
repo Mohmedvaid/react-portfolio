@@ -1,8 +1,5 @@
 import React from "react";
 import { Card, Button } from 'react-bootstrap';
-import passwordGenImg from '../assets/project-images/Password-Generator-Img.png'
-import shakerImg from '../assets/project-images/The_Shaker_Hero.png'
-import weartherImg from '../assets/project-images/Weather_Dashboard_Hero.png'
 
 const cardSize = {
   width: '35rem', 
@@ -14,7 +11,7 @@ const Portfolio = () => (
     <h1 className="heading">My Projects</h1>
     <div className="card-container">
     <Card className="card" style={cardSize}>
-      <Card.Img variant="top" src={passwordGenImg} />
+      <Card.Img variant="top" src="/assets/project-images/Password-Generator-Img.png" />
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">The Shaker<i
                 className="material-icons right">more_vert</i></span>
@@ -34,7 +31,7 @@ const Portfolio = () => (
     </Card> 
 
     <Card className="card" style={cardSize}>
-      <Card.Img variant="top" src={weartherImg} />
+      <Card.Img variant="top" src="/assets/project-images/Weather_Dashboard_Hero.png" />
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">Weather App<i
                 className="material-icons right">more_vert</i></span>
@@ -54,7 +51,7 @@ const Portfolio = () => (
     </Card> 
 
     <Card className="card" style={cardSize}>
-      <Card.Img variant="top" src={shakerImg} />
+      <Card.Img variant="top" src="/assets/project-images/The_Shaker_Hero.png" />
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">The Shaker<i
                 className="material-icons right">more_vert</i></span>

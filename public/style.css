@@ -31,26 +31,6 @@
     }
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("./Images/plex-img2.jpg");
-
-    /* Set a specific height */
-    min-height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.video {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-}
-
 
 a.logo {
     font-family: 'Audiowide', cursive;
@@ -71,58 +51,11 @@ a.nav-link {
     padding-right: 40px !important;
 }
 
-.centered {
-    position: absolute;
-    top: 17%;
-    left: 17%;
-    color: black;
-    font-size: 70px;
-    font-family: 'Audiowide', cursive;
-}
-.about-img{
-    height: 100%;
-    width: 100%;
-}
 
-.vid-img-container {
-    display: flex;
-    align-items: center;
-}
-
-.myImg-container {
-    display: flex;
-    position: relative;
-    width: 50%;
-    justify-content: center;
-
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-}
 
 .text-code{
     color: #5b4cff;
 }
-
-.myImg-container:hover .overlay {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-
 
 
 .text {
@@ -221,23 +154,4 @@ a.nav-link {
 
 .page{
     padding-bottom: 2.5rem;
-}
-
-@media only screen and (max-width: 600px) {
-    .centered {
-        font-size: 60px;
-    }
-
-    nav.navbar {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-
-    .vid-img-container{
-        flex-direction: column;
-    }
-
-    .video, .myImg-container{
-        width: 100%;
-    }
 }

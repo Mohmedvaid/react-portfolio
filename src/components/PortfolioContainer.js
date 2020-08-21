@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-// import NavBar from './NavBar'
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import NavBar from './ NavBar'
+import Home from "../pages/home/Home";
+import Portfolio from "../pages/portfolio/Portfolio";
+import Contact from "../pages/contact/Contact";
+import NavBar from './navbar/ NavBar'
 
 class PortfolioClass extends Component {
   state = {

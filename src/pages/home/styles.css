@@ -1,0 +1,102 @@
+
+/* background image styles */
+.parallax {
+    /* The image used */
+    background-image: url("/images/plex-img2.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* parallex text */
+.centered {
+    position: absolute;
+    top: 17%;
+    left: 17%;
+    color: black;
+    font-size: 70px;
+    font-family: 'Audiowide', cursive;
+    margin: 20px;
+}
+
+/* Video-img Container */
+.vid-img-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.video {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.myImg-container {
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: center;
+}
+.about-img{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px 1px 30px 1px;
+    margin: 2px white;
+    padding: 10px;
+    border: 2px;
+}
+.vid-img-container:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 30px 1px 30px 1px;
+    background-color: #12062b;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+/* Recent work */
+.recentwork-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .centered {
+        font-size: 60px;
+        top:10%;
+        left: 7%;
+    }
+
+    nav.navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .vid-img-container{
+        flex-direction: column;
+    }
+
+    .video, .myImg-container{
+        width: 100%;
+    }
+}

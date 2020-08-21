@@ -1,7 +1,9 @@
 import React from 'react'
 import { Navbar, Nav} from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom'
+import "./styles.css"
 
-function NavBar(props) {
+function NavBar() {
 
   let logo = document.querySelector('a.logo.nav-brand');
 
@@ -14,21 +16,19 @@ window.onResize = function() {
     return ( 
         <>
           <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark-4" variant="dark">
-            <Navbar.Brand onClick={()=> props.handleChange("Home")} href="#Home" className="logo">MV</Navbar.Brand>
+            <Navbar.Brand className="logo"><Link to="/">MV</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="navLinks">
               <Nav className="ml-auto">
-                <Nav.Link href="#Home"
-                onClick={()=> props.handleChange("Home")}
-                >Home</Nav.Link>
-
-                <Nav.Link href="#Portfolio"
-                onClick={()=> props.handleChange("Portfolio")}
-                >Portfolio</Nav.Link>
-
-                <Nav.Link href="#Contact"
-                onClick={()=> props.handleChange("Contact")}
-                >Contact</Nav.Link>
+                   <Link to="/">
+                  HOME
+                </Link>
+                <Link to="/contact">
+                  CONTACT
+                </Link>
+                <Link to="/portfolio">
+                  PORTFOLIO
+                </Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
