@@ -12,7 +12,7 @@ const Home = (props) => (
   <>
     <section >
         <div className="parallax"></div>
-        <div className="centered">Hello, my name is Mohmed Vaid.</div>
+        <div className="centered">Hello! My name is Mohmed Vaid.</div>
 
         <div  className="vid-img-container">
         <div   className="video">
@@ -80,13 +80,6 @@ const Home = (props) => (
                 
 
             </div>
-        </div>
-
-        <div className="cta">
-          <p>Checkout My Latest Projects</p>
-          <Button className="projects-btn" onClick={()=> props.handleChange("Portfolio")} style={{fontSize:"30px", width: "100%", height: "100px"}} variant="secondary" size="lg">
-              Click Here!
-         </Button>
         </div>
       </section>
   </>

@@ -1,5 +1,4 @@
 import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/navbar/ NavBar"
