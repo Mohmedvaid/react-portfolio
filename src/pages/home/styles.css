@@ -26,7 +26,7 @@
 
 .aboutme-parallex{
     position: relative;
-    min-height: 600px;
+    /* min-height: 600px; */
 }
 .aboutme{
     text-align: center;
@@ -42,7 +42,7 @@
     padding: 15px;
 }
 .aboutme-main{
-    position: absolute;
+    /* position: absolute; */
     top: 1px;
 }
 .recent-work{
@@ -85,6 +85,8 @@
     position: relative;
     width: 50%;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .about-img{
     height: 100%;
@@ -95,7 +97,7 @@
     padding: 10px;
     border: 2px;
 }
-.vid-img-container:hover .overlay {
+.myImg-container:hover .overlay {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -133,6 +135,12 @@
     text-align: center;
     text-align: left;
     width: 70%;
+}
+.hover-text-lg{
+    display: block;
+}
+.hover-text-s{
+    display: none;
 }
 .indent{
     text-indent: 5%;
@@ -177,4 +185,11 @@ blockquote{
     .video, .myImg-container{
         width: 100%;
     }
+    .hover-text-lg{
+        display: none;
+    }
+    .hover-text-s{
+        display: block;
+    }
+    
 }
