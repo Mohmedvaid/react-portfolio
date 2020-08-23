@@ -45,14 +45,13 @@ a.logo{
     position: absolute;
     left: 10px;
 }
+div#responsive-navbar-nav {
+    background-color: #212121;
+}
 
 
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
-
-    div#responsive-navbar-nav {
-        background-color: #212121;
-    }
 
 
     .contact-container{
@@ -65,12 +64,13 @@ a.logo{
     .form-data{
         word-break: break-word;
     }
+    .navLinks{
+        margin-top: 75px;
+    }
 }
 
 /* Mobile */
 @media only screen and (max-width:600px){
-    .navLinks{
-        margin-top: 62px;
-    }
+    
 
 }
