@@ -1,8 +1,8 @@
 
 /* Navbar */
-/* .navbar-toggler{
-    margin-bottom: 10px;
-} */
+.navbar{
+    position: relative;
+}
 
 a.logo {
     font-family: 'Audiowide', cursive;
@@ -14,12 +14,13 @@ nav {
 }
 
 nav.navbar {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 a.nav-link {
     font-size: 1.2rem;
     padding-right: 40px !important;
+    font-family: 'Audiowide', cursive;
 }
 .navLinks{
     text-align: center;
@@ -36,11 +37,18 @@ a.logo{
     text-decoration: none !important;
     color: white;
 }
+.navbar-toggler{
+    position: absolute;
+    right: 10px;
+}
+.navbar-brand{
+    position: absolute;
+    left: 10px;
+}
 
 
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
-
 
     div#responsive-navbar-nav {
         background-color: #212121;
@@ -59,3 +67,10 @@ a.logo{
     }
 }
 
+/* Mobile */
+@media only screen and (max-width:600px){
+    .navLinks{
+        margin-top: 62px;
+    }
+
+}
