@@ -2,7 +2,7 @@
 /* background image styles */
 .parallax {
     /* The image used */
-    background-image: url("/images/plex-img2.jpg");
+    background-image: url("/assets/parallex/plex-img2.jpg");
 
     /* Set a specific height */
     min-height: 500px;

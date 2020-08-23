@@ -25,8 +25,8 @@ const Home = (props) => (
             </div>
           </div>
         </div>
-        <div   className="video">
-           <img className="tech-img Es6-nodeJS" src="/assets/tech-images/Es6-nodeJS.jpg"></img>
+        <div className="video">
+           <img className="tech-img Es6-nodeJS" src="/assets/tech-images/es6-nodeJS.jpg"></img>
             <img className="tech-img html-css" src="/assets/tech-images/html-css.jpg"></img>
             <img className="tech-img Es6-nodeJS" src="/assets/tech-images/MERN.jpg"></img>
 
