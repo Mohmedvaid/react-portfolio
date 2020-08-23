@@ -19,7 +19,7 @@
     top: 17%;
     left: 17%;
     color: black;
-    font-size: 70px;
+    font-size: 3rem;
     font-family: 'Audiowide', cursive;
     margin: 20px;
 }
@@ -110,7 +110,7 @@
 }
 .text {
     color: white;
-    font-size: 35px;
+    font-size: 1.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,7 +118,18 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    text-align: left
+    text-align: left;
+    width: 70%;
+}
+.indent{
+    text-indent: 5%;
+}
+blockquote{
+    border: none !important;
+    margin-bottom: 0;
+}
+.code-body{
+    margin-bottom: 0 !important;
 }
 /* section headings */
 .heading{
@@ -142,9 +153,11 @@
 
 @media only screen and (max-width: 600px) {
     .centered {
-        font-size: 60px;
         top:10%;
         left: 7%;
+    }
+    .text{
+        font-size: 1rem;
     }
 
     nav.navbar {
