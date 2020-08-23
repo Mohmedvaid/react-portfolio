@@ -45,14 +45,10 @@ a.logo{
     position: absolute;
     left: 10px;
 }
-div#responsive-navbar-nav {
-    background-color: #212121;
-}
 
 
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
-
 
     .contact-container{
         flex-direction: column-reverse;
@@ -66,6 +62,10 @@ div#responsive-navbar-nav {
     }
     .navLinks{
         margin-top: 75px;
+    }
+    /* adding background color to nav links ddl */
+    div#responsive-navbar-nav {
+        background-color: #212121;
     }
 }
 
