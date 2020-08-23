@@ -13,7 +13,7 @@ const Home = (props) => (
   <>
     <section >
         <div className="parallax"></div>
-        <div className="centered">Hello! My name is Mohmed Vaid.</div>
+        <div className="centered">Hello! I'm <span className="dark-pink">Mohmed Vaid</span>. I'm full-stackweb developer.</div>
 
         <div  className="vid-img-container">        
         <div className ="myImg-container">
@@ -33,11 +33,13 @@ const Home = (props) => (
         </div>
 
         </div>
-        <div className="aboutme">
+        <div className="parallax aboutme-parallex">
+        <div className="aboutme aboutme-main">
             <p className="heading">About Me</p>
             <p className ="aboutpara">I'm a web developer based in Chicago IL, USA. I enjoy turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me playing baseball, gardening or working out in the park.</p>
         </div>
-        <div className="aboutme">
+        </div>
+        <div className="aboutme recent-work">
             <p className="heading">Recent Work</p>
             <div className="recentwork-container">
                 <Row>

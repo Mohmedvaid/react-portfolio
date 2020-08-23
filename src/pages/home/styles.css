@@ -24,6 +24,23 @@
     margin: 20px;
 }
 
+.aboutme-parallex{
+    position: relative;
+}
+.aboutme-main{
+    position: absolute;
+    top: 1px;
+}
+.recent-work{
+    background-color: #212121;
+}
+.recent-work > p{
+    color: white;
+}
+.dark-pink{
+    color: #a5154f;
+}
+
 /* Video-img Container */
 .vid-img-container {
     display: flex;
