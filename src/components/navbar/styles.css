@@ -38,16 +38,16 @@ a.logo{
 
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
-    nav{
+    /* nav{
         padding-top:0 !important;
     }
     a.logo {
         padding: 0;
-    }
+    } */
 
     div#responsive-navbar-nav {
         background-color: #212121;
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     #root>nav {
@@ -71,7 +71,3 @@ a.logo{
     }
 }
 
-/* mobile devices */
-@media only screen and (max-width:600px){
-    
-}
