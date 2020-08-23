@@ -43,7 +43,7 @@ a.logo{
 }
 .navbar-brand{
     position: absolute;
-    left: 10px;
+    left: 7%;
 }
 
 
@@ -61,7 +61,10 @@ a.logo{
         word-break: break-word;
     }
     .navLinks{
-        margin-top: 75px;
+        position: absolute;
+        width: 95%;
+        top: 125%;
+        left: 3%;
     }
     /* adding background color to nav links ddl */
     div#responsive-navbar-nav {

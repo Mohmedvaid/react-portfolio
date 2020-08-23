@@ -40,7 +40,11 @@ const Home = (props) => (
         <div className="parallax aboutme-parallex">
         <div className="aboutme aboutme-main">
             <p className="heading">About Me</p>
-            <p className ="aboutpara">I'm a web developer based in Chicago IL, USA. I enjoy turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me playing baseball, gardening or working out in the park.</p>
+            <p className ="aboutpara">
+            I am a Full Stack Web Developer based in Chicago IL, leveraging my background in computer science to build efficient and powerful web applications. I recently earned a certificate in Full Stack Web Development from Northwestern University, where I developed skills in JavaScript, React.js, Node.js, Axios, Express, MongoDB, SQL, JavaScript, CSS, HTML, and Python to develop a powerful full stack and server-side applications. Known as an innovative problem-solver passionate about developing meaningful apps, with a focus on time and space complexity algorithms and mobile-first design development. <br/>
+            
+            Willingness to learn about entrepreneurship and business challenges from a diverse perspective and collaborating with others to create meaningful solutions. With each project, I aim to best engage my audience for impactful user experience. I applied aspects of UX, computer science fundamentals, and agile development in a recent project where I worked in a team of four to develop a MERN app that helps dog owners to find a buddy for their pets.  Fascinated by computer science fundamentals and breaking down a problem piece-by-piece to find a solution. I’m excited to leverage my skills as part of a fast-paced, quality-driven team to build better experiences on the web.
+              </p>
         </div>
         </div>
         <div className="aboutme recent-work">
