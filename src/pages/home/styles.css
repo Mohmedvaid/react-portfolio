@@ -31,9 +31,24 @@
     padding: 20px;
 }
 .video {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 50%;
+}
+.Es6-nodeJS{
+    grid-column-start: 1;
+    grid-column-end: span 2 ;
+}
+.html-css{
+    width: 70% !important;
+    place-self: center;
+    grid-column-end: span 2 ;
+    grid-column-start: 1;
+}
+
+.tech-img{
+    width: 100%;
 }
 .myImg-container {
     display: flex;
