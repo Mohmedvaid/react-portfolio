@@ -17,7 +17,24 @@ window.onResize = function() {
 
     return ( 
         <>
-          <Navbar sticky="top" collapseOnSelect expand="lg" expanded={expanded} bg="dark-4" variant="dark">
+        <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark-4" variant="dark" expanded={expanded}>
+          <Navbar.Brand><Link to="/" className="logo">MV</Link></Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+          <Navbar.Collapse id="responsive-navbar-nav" className="navLinks">
+            <Nav className="ml-auto">
+            <Nav.Link onClick={() => setExpanded(false)}>
+                    <Link className="navlink" to="/">HOME</Link>
+                  </Nav.Link>
+                  <Nav.Link onClick={() => setExpanded(false)}>
+                    <Link className="navlink" to="/portfolio">PORTFOLIO</Link>
+                  </Nav.Link>
+                  <Nav.Link onClick={() => setExpanded(false)}>
+                    <Link className="navlink" to="/contact">CONTACT</Link>
+                  </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+    </Navbar>
+          {/* <Navbar sticky="top" collapseOnSelect expand="lg" expanded={expanded} bg="dark-4" variant="dark">
             <Navbar.Brand className="logo"><Link to="/" className="logo">MV</Link></Navbar.Brand>
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")}  aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="navLinks">
@@ -33,7 +50,7 @@ window.onResize = function() {
                   </Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </Navbar>
+          </Navbar> */}
         </>
     )
 }

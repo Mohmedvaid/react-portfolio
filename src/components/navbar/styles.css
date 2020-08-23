@@ -1,12 +1,12 @@
 
 /* Navbar */
-.navbar-toggler{
+/* .navbar-toggler{
     margin-bottom: 10px;
-}
+} */
 
 a.logo {
     font-family: 'Audiowide', cursive;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 nav {
@@ -18,11 +18,14 @@ nav.navbar {
 }
 
 a.nav-link {
-    font-size: 20px;
+    font-size: 1.2rem;
     padding-right: 40px !important;
 }
-.navlink{
-    margin: 0 10px
+.navLinks{
+    text-align: center;
+}
+.navbar-toggler{
+    border-color: rgb(33 33 33) !important;
 }
 
 a.navlink:hover{
@@ -37,17 +40,12 @@ a.logo{
 
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
-    nav.navbar {
-        padding: 0 10% !important;
-    }
+
 
     div#responsive-navbar-nav {
         background-color: #212121;
     }
 
-    #root>nav {
-        min-height: 60px;
-    }
 
     .contact-container{
         flex-direction: column-reverse;
