@@ -38,21 +38,15 @@ a.logo{
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
     nav.navbar {
-        padding: 0 10%;
+        padding: 0 10% !important;
     }
 
     div#responsive-navbar-nav {
         background-color: #212121;
-        /* padding: 10px; */
     }
 
     #root>nav {
         min-height: 60px;
-    }
-
-    #responsive-navbar-nav {
-        height: none !important;
-        width: 100%;
     }
 
     .contact-container{
