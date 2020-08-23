@@ -160,11 +160,6 @@ blockquote{
         font-size: 1rem;
     }
 
-    nav.navbar {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-
     .vid-img-container{
         flex-direction: column;
     }
