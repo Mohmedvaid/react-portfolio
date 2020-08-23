@@ -17,7 +17,7 @@ window.onResize = function() {
 
     return ( 
         <>
-          <Navbar sticky="top" collapseOnSelect expand="lg" expanded={expanded}  expand="lg" bg="dark-4" variant="dark">
+          <Navbar sticky="top" collapseOnSelect expand="lg" expanded={expanded} bg="dark-4" variant="dark">
             <Navbar.Brand className="logo"><Link to="/" className="logo">MV</Link></Navbar.Brand>
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")}  aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="navLinks">
