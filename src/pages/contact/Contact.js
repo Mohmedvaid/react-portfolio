@@ -12,7 +12,7 @@ const Contact = () => (
 
       <div className="email">
           <p className="form-label">Email</p>
-          <p className="form-data">Mvaid@u.northwestern.edu</p>
+          <p className="form-data">Mohmedvaid@gmail.com</p>
       </div>
       
       <div className="social-media">
