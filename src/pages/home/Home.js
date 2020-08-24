@@ -1,5 +1,4 @@
 import React from "react";
-// import { Card, Button } from 'react-bootstrap';
 import { Card, Col, Row, Icon, CardTitle } from 'react-materialize'
 import './styles.css'
 
@@ -48,7 +47,7 @@ const Home = (props) => (
               </p>
         </div>
         </div>
-        <div className="aboutme recent-work">
+        <div className="recent-work">
             <p className="heading">Recent Work</p>
             <div className="recentwork-container">
                 <Row>
@@ -58,15 +57,18 @@ const Home = (props) => (
                   >
                     <Card
                       closeIcon={<Icon>close</Icon>}
-                      header={<CardTitle image="/assets/project-images/Password-Generator-Img.png" reveal waves="light"/>}
+                      header={<CardTitle image="/assets/project-images/fetch.png" reveal waves="light"/>}
                       reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
                       revealIcon={<Icon>more_vert</Icon>}
-                      title="Card Title"
+                      title="Fetch"
                     >
-                      <p>
-                        <a href="#">
-                          This is a link
+                      <p className="project-links">
+                        <a href="https://github.com/raise-da-woof/fetch">
+                          Github
                         </a>
+                        {/* <a className="project-links" href="https://fetch-woof-312.herokuapp.com/">
+                          Live Site
+                        </a> */}
                       </p>
                     </Card>
                   </Col>
@@ -78,15 +80,18 @@ const Home = (props) => (
                   >
                     <Card
                       closeIcon={<Icon>close</Icon>}
-                      header={<CardTitle image="/assets/project-images/Password-Generator-Img.png" reveal waves="light"/>}
+                      header={<CardTitle image="/assets/project-images/mypantry.png" reveal waves="light"/>}
                       reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
                       revealIcon={<Icon>more_vert</Icon>}
-                      title="Card Title"
+                      title="My Pantry"
                     >
-                      <p>
-                        <a href="#">
-                          This is a link
+                      <p className="project-links">
+                        <a href="https://github.com/Hot-Fixers/mypantry">
+                          Github
                         </a>
+                        {/* <a href="https://shielded-harbor-38774.herokuapp.com/">
+                          Live Site
+                        </a> */}
                       </p>
                     </Card>
                   </Col>

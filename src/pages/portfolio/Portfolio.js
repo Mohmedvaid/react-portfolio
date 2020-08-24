@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, Button } from 'react-bootstrap';
+import { Card, Col, Row, Icon, CardTitle } from 'react-materialize'
+import './styles.css'
 
 const cardSize = {
   width: '35rem', 
@@ -10,7 +11,96 @@ const Portfolio = () => (
   <div>
     <h1 className="heading">My Projects</h1>
     <div className="card-container">
-    <Card className="card" style={cardSize}>
+      {/* card 1 */}
+    <Row>
+      <Col
+        m={6}
+        s={12}
+      >
+        <Card
+          closeIcon={<Icon>close</Icon>}
+          header={<CardTitle image="/assets/project-images/fetch.png" reveal waves="light"/>}
+          reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
+          revealIcon={<Icon>more_vert</Icon>}
+          title="Fetch"
+        >
+          <p >
+            <a href="https://github.com/raise-da-woof/fetch">
+              Github
+            </a>
+          </p>
+        </Card>
+      </Col>
+    </Row> 
+    {/* card 2 */}
+    <Row>
+        <Col
+          m={6}
+          s={12}
+        >
+          <Card
+            closeIcon={<Icon>close</Icon>}
+            header={<CardTitle image="/assets/project-images/mypantry.png" reveal waves="light"/>}
+            reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
+            revealIcon={<Icon>more_vert</Icon>}
+            title="My Pantry"
+          >
+            <p className="project-links">
+              <a href="https://github.com/Hot-Fixers/mypantry">
+                Github
+              </a>
+              {/* <a href="https://shielded-harbor-38774.herokuapp.com/">
+                Live Site
+              </a> */}
+            </p>
+          </Card>
+        </Col>
+      </Row> 
+      {/* card 3 */}
+    <Row>
+      <Col
+        m={6}
+        s={12}
+      >
+        <Card
+          closeIcon={<Icon>close</Icon>}
+          header={<CardTitle image="/assets/project-images/shaker.png" reveal waves="light"/>}
+          reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
+          revealIcon={<Icon>more_vert</Icon>}
+          title="Shaker"
+        >
+          <p >
+            <a href="https://github.com/JSON-D3RULO/shaker">
+              Github
+            </a>
+          </p>
+        </Card>
+      </Col>
+    </Row> 
+    <Row>
+      <Col
+        m={6}
+        s={12}
+      >
+        <Card
+          closeIcon={<Icon>close</Icon>}
+          header={<CardTitle image="/assets/project-images/fetch.png" reveal waves="light"/>}
+          reveal={<p>Here is some more information about this product that is only revealed once clicked on.</p>}
+          revealIcon={<Icon>more_vert</Icon>}
+          title="Fetch"
+        >
+          <p >
+            <a href="https://github.com/raise-da-woof/fetch">
+              Github
+            </a>
+            {/* <a className="project-links" href="https://fetch-woof-312.herokuapp.com/">
+              Live Site
+            </a> */}
+          </p>
+        </Card>
+      </Col>
+    </Row> 
+    {/* <Card className="card" style={cardSize}>
       <Card.Img variant="top" src="/assets/project-images/Password-Generator-Img.png" />
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">The Shaker<i
@@ -68,7 +158,7 @@ const Portfolio = () => (
               </div>
           </Card.Body>
         </div>
-    </Card> 
+    </Card>  */}
     </div>
   </div>
 );
