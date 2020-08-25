@@ -2,10 +2,7 @@ import React from "react";
 import { Card, Col, Row, Icon, CardTitle } from 'react-materialize'
 import './styles.css'
 
-const cardSize = {
-  width: '35rem', 
-  height:'25rem' 
-}
+
 
 const Home = (props) => (
   
@@ -89,9 +86,6 @@ const Home = (props) => (
                         <a href="https://github.com/Hot-Fixers/mypantry">
                           Github
                         </a>
-                        {/* <a href="https://shielded-harbor-38774.herokuapp.com/">
-                          Live Site
-                        </a> */}
                       </p>
                     </Card>
                   </Col>

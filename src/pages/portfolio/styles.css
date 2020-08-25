@@ -1,3 +1,6 @@
 .card-container{
     padding: 20px;
 }
+.portfolio-cards{
+    max-width: 350px;
+}

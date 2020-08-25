@@ -60,7 +60,7 @@
 .vid-img-container {
     display: flex;
     align-items: center;
-    padding: 1% 8%;
+    padding: 1% 18%;
 }
 .video {
     display: grid;
@@ -168,7 +168,7 @@ blockquote{
     flex-wrap: wrap;
 }
 .card{
-    max-width: 400px;
+    max-width: 600px;
 }
 .project-links{
     margin-right: 40px !important;
@@ -177,6 +177,9 @@ blockquote{
 
 
 @media only screen and (max-width: 600px) {
+    .parallax{
+        background-image: url("/assets/parallex/plex-img-mobile.jpg");
+    }
     .centered {
         top:15%;
         left: 7%;
@@ -188,6 +191,7 @@ blockquote{
 
     .vid-img-container{
         flex-direction: column;
+        padding: 1% 5%;
     }
 
     .video, .myImg-container{
@@ -203,4 +207,12 @@ blockquote{
         margin: 0;
     }
     
+}
+
+/* for medium screen */
+@media screen and (max-width: 1200px) { 
+    .vid-img-container{
+        padding: 1% 5%;
+    }
+
 }
