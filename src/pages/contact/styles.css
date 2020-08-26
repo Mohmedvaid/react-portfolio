@@ -1,29 +1,45 @@
-.monospaceFont{
+.monospaceFont {
     font-family: monospace;
 }
 
-.resume-icon, .linkedin-icon, .github-icon{
+.resume-icon,
+.linkedin-icon,
+.github-icon {
     margin: 5px;
 }
 
-.phone, .email, .social-media{
+.phone,
+.email,
+.social-media {
     margin: 20px
 }
 
-.form-label{
+.form-label {
     color: #cbcbcb;
     font-size: 25px;
 }
-.form-data{
+
+.form-data {
     font-size: 30px;
 }
-.social-icons{
+
+.social-icons {
     margin: 7px;
 }
 
-.contact-container{
+.contact-container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 100px;
+}
+
+@media only screen and (max-width: 992px) {
+    .contact-container {
+        padding: 20px;
+        margin-top: 20px !important;
+    }
+    .form-data{
+        word-break: break-word;
+    }
 }

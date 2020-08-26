@@ -206,6 +206,10 @@ blockquote{
     .aboutpara{
         margin: 0;
     }
+    .aboutme{
+        text-align: center;
+        padding: 20px;
+    }
     
 }
 
