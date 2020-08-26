@@ -50,16 +50,6 @@ a.logo{
 /* Adjusting nav as bootstrap toggeler appears at 992px */
 @media only screen and (max-width: 992px) {
 
-    .contact-container{
-        flex-direction: column-reverse;
-        align-content: center;
-        padding: 20px;
-        margin-top: 20px !important;
-    }
-
-    .form-data{
-        word-break: break-word;
-    }
     .navLinks{
         position: absolute;
         width: 95%;

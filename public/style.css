@@ -13,12 +13,6 @@
     margin: 5px;
 }
 
-.cta{
-    text-align: center;
-    font-size: 60px;
-    font-family: 'Audiowide', cursive;
-    padding: 10px;
-}
 
 .card-container{
     display: flex;
@@ -28,32 +22,6 @@
 
 .card{
     margin: 15px;
-}
-
-.contact-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 100px;
-}
-
-.phone, .email, .social-media{
-    margin: 20px
-}
-
-.form-label{
-    color: #cbcbcb;
-    font-size: 25px;
-}
-.form-data{
-    font-size: 30px;
-}
-.social-icons{
-    margin: 7px;
-}
-
-.resume-icon, .linkedin-icon, .github-icon{
-    margin: 5px;
 }
 
 .footer-heading{
@@ -73,4 +41,16 @@
 
 .page{
     padding-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .contact-container{
+        padding: 20px;
+        margin-top: 20px !important;
+    }
+
+    .form-data{
+        word-break: break-word;
+    }
 }

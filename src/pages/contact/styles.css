@@ -1,0 +1,29 @@
+.monospaceFont{
+    font-family: monospace;
+}
+
+.resume-icon, .linkedin-icon, .github-icon{
+    margin: 5px;
+}
+
+.phone, .email, .social-media{
+    margin: 20px
+}
+
+.form-label{
+    color: #cbcbcb;
+    font-size: 25px;
+}
+.form-data{
+    font-size: 30px;
+}
+.social-icons{
+    margin: 7px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
