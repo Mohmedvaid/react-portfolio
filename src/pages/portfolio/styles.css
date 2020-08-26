@@ -4,3 +4,8 @@
 .portfolio-cards{
     max-width: 350px;
 }
+
+.cardLinks{
+    display: flex;
+    justify-content: space-between;
+}
