@@ -29,9 +29,12 @@
 
 .contact-container {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 100px;
+    justify-content: center;
+    margin: 100px;
+}
+.contact-container > div{
+    flex: 1 0 31%;
 }
 
 @media only screen and (max-width: 992px) {

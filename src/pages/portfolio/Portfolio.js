@@ -88,7 +88,7 @@ const Portfolio = () => (
               <a href="https://github.com/JSON-D3RULO/shaker" target="_blank">
                 Github
               </a>
-            </div></>}          revealIcon={<Icon>more_vert</Icon>}
+            </div></>} revealIcon={<Icon>more_vert</Icon>}
           title="Shaker"
         >
           <p >
