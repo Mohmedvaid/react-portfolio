@@ -15,6 +15,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/fetch.png" reveal waves="light"/>}
           reveal={<><p>An app that helps pet owner find new friends for their furry family members. Created using MERN stack, React-image-crop Mongoose, Axios, Materialize, Multer, Imgur, Animate.css, Passport
@@ -47,6 +48,7 @@ const Portfolio = () => (
         >
           <Card
           className="portfolio-cards"
+          data-aos="zoom-in-down"
             closeIcon={<Icon>close</Icon>}
             header={<CardTitle image="/assets/project-images/mypantry.png" reveal waves="light"/>}
             reveal={<><p>App that provides recipes to users with ingredients the users have on hand. Built with Spoonacular API, MySQL, Passport, Bulma,Express, Express Handlebars, ESLint. Travis.<br/><br/>
@@ -77,6 +79,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/shaker.png" reveal waves="light"/>}
           reveal={<><p>Shaker is a web app for discovering new cocktails and drinks. Favorite drinks can be stored in localStorage, recalled for future use and deleted is necessary. Shaker also features the Google maps api, allow users to pull up a map of bars near them that may be serving the new and interesting cocktails they find!<br/><br/>
@@ -106,6 +109,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/fitness-tracker.png" reveal waves="light"/>}
           reveal={<><p>The fitness tracker allows users to create, track and manage workouts/exercises using Chart.js. Its built using Express, MongoDB, Mongoose, and Chart js.
@@ -137,6 +141,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/cr-shift.png" reveal waves="light"/>}
           reveal={<><p>A simple app that allows the users to add names and schedules times for any activity. The app then automatically creates displays shift according to the availibility of the people. Its created with jQuery, MongoDB and Express<br/><br/>
@@ -166,6 +171,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/note-taker.png" reveal waves="light"/>}
           reveal={<><p>Note takers is simple app that allows the users to create and save notes for future. The notes are saved in the local storage of the browser<br/><br/>
@@ -195,6 +201,7 @@ const Portfolio = () => (
       >
         <Card
         className="portfolio-cards"
+        data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/employee-manager.png" reveal waves="light"/>}
           reveal={<><p>Employee-tracker is a CLI content management system that allows the user to manage employees. The app allows the user to add/remove employees, departments and roles. Roles, Managers and employees can be views edited accordingly.<br/><br/>
@@ -222,6 +229,7 @@ const Portfolio = () => (
       >
         <Card
          className="portfolio-cards"
+         data-aos="zoom-in-down"
           closeIcon={<Icon>close</Icon>}
           header={<CardTitle image="/assets/project-images/weather-app.png" reveal waves="light"/>}
           reveal={<><p>The Weather App shows basic weather data such as a 5-day forecast for a city based on user search! Boostrap and jQuery were used to build this app<br/><br/>
