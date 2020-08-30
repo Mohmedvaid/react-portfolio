@@ -11,8 +11,11 @@ const Home = (props) => (
         <div className="parallax"></div>
         <div className="centered">Hello! I'm <span className="dark-pink">Mohmed Vaid</span>. I'm full-stackweb developer.</div>
 
-        <div  className="vid-img-container"> 
-          <div className ="myImg-container">
+        <div className="vid-img-container"> 
+          <div data-aos="fade-down"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine" 
+          className ="myImg-container">
             <p className="hover-text-lg"> Hover over the image for more info!</p>
             <p className="hover-text-s"> Tap on the image for more info!</p>
             <img className="about-img"src="/assets/my-img-code-bg-final.png" alt="Mohmed vaid profile" />
@@ -27,7 +30,10 @@ const Home = (props) => (
               </div>
             </div>
           </div>
-        <div className="video">
+        <div data-aos="fade-up"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        className="video">
            <img className="tech-img Es6-nodeJS" src="/assets/tech-images/es6-nodeJS.jpg"></img>
             <img className="tech-img html-css" src="/assets/tech-images/html-css.jpg"></img>
             <img className="tech-img Es6-nodeJS" src="/assets/tech-images/MERN.jpg"></img>
@@ -35,7 +41,9 @@ const Home = (props) => (
 
         </div>
         <div className="parallax aboutme-parallex">
-        <div className="aboutme aboutme-main">
+        <div data-aos="fade-down"
+             data-aos-easing="linear"
+             data-aos-duration="1500" className="aboutme aboutme-main">
             <p className="heading">About Me</p>
             <p className ="aboutpara">
             I am a Full Stack Web Developer based in Chicago IL, leveraging my background in computer science to build efficient and powerful web applications. I recently earned a certificate in Full Stack Web Development from Northwestern University, where I developed skills in JavaScript, React.js, Node.js, Axios, Express, MongoDB, SQL, CSS, HTML, and Python to develop a powerful full stack and server-side applications.<br/><br/> Known as an innovative problem-solver passionate about developing meaningful apps,with a focus on time and space complexity algorithms and mobile-first design development. Willingness to learn about entrepreneurship and business challenges from a diverse perspective and collaborating with others to create meaningful solutions. 
@@ -53,6 +61,9 @@ const Home = (props) => (
                     s={12}
                   >
                   <Card
+                  data-aos="flip-down"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
                     
                       closeIcon={<Icon>close</Icon>}
                       header={<CardTitle image="/assets/project-images/fetch.png" reveal waves="light"/>}
@@ -84,6 +95,9 @@ const Home = (props) => (
                     s={12}
                   >
                 <Card
+                data-aos="flip-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
                 
                   closeIcon={<Icon>close</Icon>}
                   header={<CardTitle image="/assets/project-images/mypantry.png" reveal waves="light"/>}
