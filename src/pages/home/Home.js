@@ -23,7 +23,7 @@ const Home = (props) => (
               <div className="text">
               <div className="text-code">&lt;mohmed&gt;<br/></div>
               <blockquote>
-              <p><div className="text-code">&lt;head&gt;</div><blockquote>getBrain = () => &#123;<br/> <blockquote>return &#123;<br/>software engineer: 50%;<br/>entrepreneur: 50%;<br/>&#125;</blockquote>&#125;;</blockquote> <div className="text-code"> &lt;/head&gt;</div></p> 
+              <p><div className="text-code">&lt;head&gt;</div><blockquote>getBrain = () => &#123;<br/> <blockquote>return &#123;<br/>software engineer: 50%,<br/>entrepreneur: 50%<br/>&#125;</blockquote>&#125;;</blockquote> <div className="text-code"> &lt;/head&gt;</div></p> 
               <p className="code-body"><div className="text-code">&lt;body&gt;<br/></div><blockquote>&lt;baseball&gt;75%&lt;/baseball&gt;<br/>&lt;gym&gt;25%&lt;/gym&gt;</blockquote><div className="text-code"> &lt;/body&gt;</div></p>
               </blockquote>
               <div className="text-code">&lt;/mohmed&gt;<br/></div>
