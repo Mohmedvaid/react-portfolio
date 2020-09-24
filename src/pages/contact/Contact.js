@@ -25,11 +25,11 @@ const Contact = () => (
       </div>
 
       <div className="email">
-          <p className="form-label">PDF Resume</p>
+          <p className="form-label">PDF Resume<br/>(Open In Browser)</p>
           <a style={{color:"lightslategrey"}} href="assets/resume/Mohmedhusain_Vaid_Resume.pdf" ><i className="far fa-file fa-4x resume-icon" aria-hidden="true"></i></a>
       </div>
       <div className="email">
-          <p className="form-label">Word Doc Resume</p>
+          <p className="form-label">Word Doc Resume<br/>(Download)</p>
           <a style={{color:"lightslategrey"}} href="assets/resume/Mohmedhusain_Vaid_Resume.docx"><i className="far fa-file fa-4x resume-icon" aria-hidden="true"></i></a>
       </div>
     </div>
