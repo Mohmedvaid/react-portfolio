@@ -1,28 +1,41 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/navbar/ NavBar"
-import Home from './pages/home/Home'
-import Contact from './pages/contact/Contact'
-import Portfolio from './pages/portfolio/Portfolio'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import NavBar from "./components/navbar/NavBar";
+import Home from "./pages/home/Home";
+import Contact from "./pages/contact/Contact";
+import Portfolio from "./pages/portfolio/Portfolio";
 
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
 
-function App(){
-    return(
-        <Router>
-        <div>
-        <div className="flex-wrapper">
-          <NavBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/contact" component={Contact} /> 
-            <Route exact path="/portfolio" component={Portfolio} /> 
-          </Switch>
-          </div>
-        </div>
-        </Router>
-    )
+function AppContent() {
+  const location = useLocation();
+
+  const isSpecificPage =
+    location.pathname === "/" ||
+    location.pathname === "/contact" ||
+    location.pathname === "/portfolio";
+
+  return (
+    <div className="flex-wrapper">
+      {isSpecificPage && <NavBar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
-
