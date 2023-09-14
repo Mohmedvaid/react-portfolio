@@ -1,27 +1,25 @@
-.card-container{
-    padding: 20px;
-}
-.portfolio-cards{
-    max-width: 350px;
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.cardLinks{
-    display: flex;
-    justify-content: space-between;
-}
-.card-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px;
+.card-container {
+  padding: 20px;
 }
 
-.card-container .row{
-    margin: 20px;
+.portfolio-cards {
+  width: 100%;
 }
 
-@media(max-width:40em){
-    .card-container{
-        padding: 10px;
-    }
+.cardLinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
