@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 import AppBar from "@mui/material/AppBar";
@@ -10,6 +10,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+
+import useScrollCheck from "../hooks/useScrollCheck";
 import logo from "../assets/img/logo.png";
 
 const styles = {
@@ -62,18 +64,10 @@ const styles = {
 
 function ResponsiveAppBar({ menuItems }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScrollCheck();
 
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
   const handleCloseNavMenu = () => setAnchorElNav(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <AppBar

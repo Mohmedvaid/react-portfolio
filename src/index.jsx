@@ -9,8 +9,9 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import "@fontsource/rubik-dirt";
+// import "@fontsource/rubik-dirt"; // uninstalled
 import "@fontsource/stalinist-one";
+import "@fontsource/silkscreen";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,9 +19,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<App />} />
-        </Routes>
+      <Routes>
+        <Route path="/*" element={<App />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

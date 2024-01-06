@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Grid, Typography, Box, Container } from "@mui/material";
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+
 import myImage from "../assets/img/me.jpeg";
+import Title from "../components/Title";
+import Description from "../components/Description";
+import ScratchOff from "../components/ScratchOff";
+import topImage from "../assets/img/me.jpeg";
+import revealImage from "../assets/img/me.png";
 
 const styles = {
   root: {
@@ -8,18 +15,10 @@ const styles = {
     marginTop: 4,
     padding: "20px",
   },
-  titleContainer: {
-    display: "flex",
-    justifyContent: "center", // Center container
-    transition: "transform 0.5s ease", // Smooth transition for moving container
-  },
-  title: {
-    fontFamily: "Stalinist One",
-  },
   textTitle: {
-    fontFamily: "Stalinist One",
+    fontFamily: "Silkscreen, sans-serif",
     fontWeight: "bold",
-    fontSize: "1.5rem",
+    fontSize: "2.5rem",
     marginBottom: "20px",
   },
   description: {
@@ -32,72 +31,29 @@ const styles = {
   columnText: {
     width: "48%", // Each column takes roughly half the space
   },
-  myImage: {
-    maxWidth: "100%",
-    height: "auto",
-    borderRadius: "3%",
+  scratchOffSize: {
+    width: "100%", // Adjust as needed
+    height: "500px", // Adjust as needed
   },
 };
 
 const HomePage = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <Container sx={styles.root} maxWidth="none">
-      <Box
-        sx={{
-          ...styles.titleContainer,
-          transform: hasScrolled ? "translateX(-50%)" : "none", // Move left on scroll
-        }}
-      >
-        <Typography variant="h1" gutterBottom sx={styles.title}>
-          I'm Mohmed
-        </Typography>
-      </Box>
+      <Title />
 
       <Grid container spacing={2}>
         {/* Text Section */}
-        <Grid item xs={12} md={7}>
-          {" "}
-          {/* 70% of the screen */}
-          <Typography sx={styles.textTitle}>Software Engineer</Typography>
-          <Typography sx={styles.description}>
-            I like to develop robust and scalable software products with
-            outstanding user experiences.
-          </Typography>
-          <Box sx={styles.column}>
-            <Typography sx={styles.columnText}>
-              Highly skilled at progressive enhancement, system architecture &
-              software engineering.
-            </Typography>
-            <Typography sx={styles.columnText}>
-              Proven experience in building successful software solutions for
-              clients across several countries.
-            </Typography>
-          </Box>
-          <Box sx={styles.column}>
-            <Typography sx={styles.columnText}>
-              Expert in modern software development practices and technologies.
-            </Typography>
-            <Typography sx={styles.columnText}>
-              Committed to implementing efficient and maintainable code.
-            </Typography>
-          </Box>
-        </Grid>
+        <Description />
 
         {/* Image Section */}
         <Grid item xs={12} md={5}>
-          {" "}
-          {/* Remaining 30% of the screen for the image */}
-          <img src={myImage} alt="Mohmed" style={styles.myImage} />
+          <ScratchOff
+            imageSrc={topImage}
+            revealImageSrc={revealImage}
+            containerWidth={styles.scratchOffSize.width}
+            containerHeight={styles.scratchOffSize.height}
+          />
         </Grid>
       </Grid>
     </Container>
