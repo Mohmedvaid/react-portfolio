@@ -3,6 +3,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useScrollCheck from "../hooks/useScrollCheck";
 
+import { title } from "../config/content";
+
 const styles = {
   titleContainer: {
     display: "flex",
@@ -31,7 +33,7 @@ const HomePage = () => {
       }}
     >
       <Typography variant="h1" gutterBottom sx={styles.title}>
-        I'm Mohmed
+        {title}
       </Typography>
     </Box>
   );

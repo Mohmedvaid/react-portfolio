@@ -3,9 +3,10 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import TypingEffect from "../components/TypingEffect";
+import { description } from "../config/content";
 
 const styles = {
-  root:{
+  root: {
     display: "flex",
     justifyContent: "center", // Center container
     transition: "transform 0.5s ease", // Smooth transition for moving container
@@ -20,8 +21,9 @@ const styles = {
     marginBottom: "100px",
   },
   description: {
+    fontFamily: "Silkscreen, sans-serif",
     marginBottom: "100px",
-    fontSize: "1.7rem",
+    fontSize: "1.2rem",
     textAlign: "right",
   },
   column: {
@@ -44,11 +46,8 @@ const HomePage = () => {
   return (
     <Grid item xs={12} md={7} sx={styles.root}>
       {/* 70% of the screen */}
-      <TypingEffect sx={styles.textTitle}>Software Engineer</TypingEffect>
-      <Typography sx={styles.description}>
-        I like to develop robust and scalable software products with outstanding
-        user experiences.
-      </Typography>
+      <TypingEffect sx={styles.textTitle}>{description.title}</TypingEffect>
+      <Typography sx={styles.description}>{description.text}</Typography>
     </Grid>
   );
 };
