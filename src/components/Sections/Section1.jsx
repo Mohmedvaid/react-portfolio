@@ -14,7 +14,7 @@ const styles = {
   },
 };
 
-const HomePage = () => (
+const Section1 = () => (
   <Grid container spacing={2}>
     <Description />
     <Grid item xs={12} md={5}>
@@ -28,4 +28,4 @@ const HomePage = () => (
   </Grid>
 );
 
-export default HomePage;
+export default Section1;

@@ -2,13 +2,15 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
+import { ghostCursor } from "cursor-effects";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import { ghostCursor } from "cursor-effects";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import theme from "./config/theme";
 import Layout from "./components/Layout";
 import Loader from "./components/Loader";
+
 import "./global/styles.css";
 
 new ghostCursor();
@@ -29,16 +31,18 @@ const App = () => (
     <CssBaseline />
     <Suspense fallback={<Loader />}>
       <Box className="animatedBackground">
-        <Routes>
-          <Route
-            path="*"
-            element={
-              <Layout menuItems={menuItems}>
-                <HomePage />
-              </Layout>
-            }
-          />
-        </Routes>
+        <ParallaxProvider>
+          <Routes>
+            <Route
+              path="*"
+              element={
+                <Layout menuItems={menuItems}>
+                  <HomePage />
+                </Layout>
+              }
+            />
+          </Routes>
+        </ParallaxProvider>
       </Box>
     </Suspense>
   </ThemeProvider>

@@ -4,7 +4,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import ZigzagLine from "../../components/SVG/ZigzagLine";
+import ParallaxWrapper from "../../components/ParallaxWrapper";
 import { section2 } from "../../config/content";
+import reactLogo from "../../assets/img/react.png";
+
+import reduxLogo from "../../assets/img/redux.png";
+import psLogo from "../../assets/img/ps.png";
+import nodeLogo from "../../assets/img/node.png";
+import mongoLogo from "../../assets/img/mongo.png";
+import expressLogo from "../../assets/img/express.png";
+import brushStrokeImage from "../../assets/img/brushStroke.png";
 
 const { design, engineering } = section2;
 
@@ -30,6 +39,7 @@ const styles = {
     padding: "20px",
     position: "relative",
     height: "100vh", // Full viewport height
+    overflowX: "hidden", // Hide overflowing elements
   },
   zigzagLine: {
     // Base style for SVG zigzag lines
@@ -52,7 +62,7 @@ const styles = {
   },
   zigzagPosition3: {
     position: "absolute",
-    top: "60%", // Adjust positioning
+    top: "70%", // Adjust positioning
     right: "70%", // Adjust positioning
     transform: "rotate(-15deg)", // Different example rotation
   },
@@ -76,12 +86,24 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f5f5f5",
+    // backgroundColor: "#f5f5f5",
     marginBottom: "20px",
+    gap: 10,
+  },
+  designLogos: {
+    width: "100px",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  brushStrokeBackground: {
+    backgroundImage: `url(${brushStrokeImage})`,
+    backgroundSize: "cover", // Ensure the image covers the entire element
+    backgroundPosition: "center", // Center the image
+    backgroundRepeat: "no-repeat", // Prevent the image from repeating
   },
 };
 
-const HomePage = () => {
+const Section2 = () => {
   return (
     <Box position="relative" sx={styles.newSection}>
       <ZigzagLine style={{ ...styles.zigzagLine, ...styles.zigzagPosition1 }} />
@@ -92,7 +114,24 @@ const HomePage = () => {
         <Grid item xs={12} md={6} sx={styles.secondSectionItem}>
           {/* title */}
           {/* placeholder image */}
-          <Box sx={styles.imagePlaceholder}>Image</Box>
+          {/* add shadow */}
+          <ParallaxWrapper
+            speed={10}
+            translateY={[-20, 20]}
+            translateX={["70px", "1px"]}
+          >
+            <Box
+              sx={{
+                ...styles.imagePlaceholder,
+                ...styles.brushStrokeBackground,
+              }}
+            >
+              <img src={nodeLogo} alt="react logo" width="110px" />
+              <img src={reactLogo} alt="react logo" width="70px" />
+              <img src={reduxLogo} alt="photoshop logo" width="70px" />
+              <img src={psLogo} alt="redux logo" width="70px" />
+            </Box>
+          </ParallaxWrapper>
 
           <Typography sx={styles.textTitle} align="center">
             {design.title}
@@ -110,11 +149,25 @@ const HomePage = () => {
             {engineering.text}
           </Typography>
           {/* placeholder image */}
-          <Box sx={styles.imagePlaceholder}>Image</Box>
+          <ParallaxWrapper
+            speed={10}
+            translateY={[-20, 20]}
+            translateX={["1px", "70px"]}
+          >
+            <Box
+              sx={{
+                ...styles.imagePlaceholder,
+                ...styles.brushStrokeBackground,
+              }}
+            >
+              <img src={mongoLogo} alt="react logo" width="200px" />
+              <img src={expressLogo} alt="photoshop logo" width="200px" />
+            </Box>
+          </ParallaxWrapper>
         </Grid>
       </Grid>
     </Box>
   );
 };
 
-export default HomePage;
+export default Section2;
