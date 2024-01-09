@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import TypingEffect from "../components/TypingEffect";
-import { description } from "../config/content";
+import { description } from "../data/home";
 
 const styles = {
   root: {

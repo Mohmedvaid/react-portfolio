@@ -9,7 +9,8 @@ const ParallaxWrapper = ({ speed, children, sx, translateY, translateX }) => {
 
   useEffect(() => {
     parallaxController.update();
-  }, []);
+  }, [parallaxController]);
+
   const combinedSx = {
     ...sx,
     overflowX: "hidden",

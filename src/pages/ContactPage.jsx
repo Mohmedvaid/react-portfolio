@@ -1,49 +1,47 @@
 // src/pages/ContactPage.jsx
 import React from "react";
 import { Box, Typography, Link, Grid, Paper, IconButton } from "@mui/material";
-import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
 
+import Page from "../components/Page";
 import FadeInAnimation from "../components/Animations/FadeInAnimation";
 import SlideInAnimation from "../components/Animations/SlideInAnimation";
 import ZoomInAnimation from "../components/Animations/ZoomInAnimation";
 import RotateInAnimation from "../components/Animations/RotateInAnimation";
 
+import { title, contact } from "../data/contact";
+
+const email = contact.email;
+const emailHref = `mailto:${email}`;
+const linkedIn = contact.linkedIn;
+const github = contact.github;
+const resumeDoc = contact.resumeDoc;
+const resumePDF = contact.resumePDF;
+const styles = {
+  title: {
+    marginBottom: 4,
+    fontWeight: "bold",
+  },
+};
+
 const Contact = () => (
-  <Box sx={{ p: 4 }}>
+  <Page>
     <FadeInAnimation>
-      <Typography
-        variant="h4"
-        textAlign="center"
-        sx={{ mb: 4, fontWeight: "bold" }}
-      >
-        Let's Get In Touch!
+      <Typography variant="h4" textAlign="center" sx={styles.title}>
+        {title}
       </Typography>
     </FadeInAnimation>
 
     <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12} md={6} lg={4}>
-        <SlideInAnimation>
-          <ItemWithIcon
-            icon={<PhoneIcon fontSize="large" />}
-            label="Phone"
-            content={<Link href="tel:+1(312)975 2811">+1(312)975 2811</Link>}
-          />
-        </SlideInAnimation>
-      </Grid>
-      <Grid item xs={12} md={6} lg={4}>
         <ZoomInAnimation>
           <ItemWithIcon
             icon={<EmailIcon fontSize="large" />}
             label="Email"
-            content={
-              <Link href="mailto:Mohmedvaid@gmail.com">
-                Mohmedvaid@gmail.com
-              </Link>
-            }
+            content={<Link href={emailHref}>{email}</Link>}
           />
         </ZoomInAnimation>
       </Grid>
@@ -53,7 +51,7 @@ const Contact = () => (
             icon={<DescriptionIcon fontSize="large" />}
             label="PDF Resume (Open In Browser)"
             content={
-              <Link href="assets/resume/Mohmedhusain_Vaid_Resume.pdf">
+              <Link href={resumePDF} target="_blank" rel="noreferrer">
                 Open
               </Link>
             }
@@ -66,7 +64,7 @@ const Contact = () => (
             icon={<DescriptionIcon fontSize="large" />}
             label="Word Doc Resume (Download)"
             content={
-              <Link href="assets/resume/Mohmedhusain_Vaid_Resume.docx">
+              <Link href={resumeDoc} download>
                 Download
               </Link>
             }
@@ -81,7 +79,7 @@ const Contact = () => (
           Social Media
         </Typography>
         <IconButton
-          href="https://www.linkedin.com/in/mohmedhusain-v-0374b2128/"
+          href={linkedIn}
           target="_blank"
           rel="noreferrer"
           color="primary"
@@ -89,7 +87,7 @@ const Contact = () => (
           <LinkedInIcon fontSize="large" />
         </IconButton>
         <IconButton
-          href="https://github.com/Mohmedvaid/"
+          href={github}
           target="_blank"
           rel="noreferrer"
           color="inherit"
@@ -98,7 +96,7 @@ const Contact = () => (
         </IconButton>
       </FadeInAnimation>
     </Box>
-  </Box>
+  </Page>
 );
 
 const ItemWithIcon = ({ icon, label, content }) => (

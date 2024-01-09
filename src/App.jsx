@@ -8,6 +8,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 
 import theme from "./config/theme";
+import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import Loader from "./components/Loader";
 
@@ -15,7 +16,7 @@ import "./global/styles.css";
 
 new ghostCursor();
 
-const HomePage = React.lazy(() => import("./pages/HomePage"));
+// lazy load pages
 const PortfolioPage = React.lazy(() => import("./pages/PortfolioPage"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 

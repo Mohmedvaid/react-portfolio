@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useScrollCheck from "../hooks/useScrollCheck";
 
-import { title } from "../config/content";
+import { title } from "../data/home";
 
 const styles = {
   titleContainer: {

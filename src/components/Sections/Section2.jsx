@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 import ZigzagLine from "../../components/SVG/ZigzagLine";
 import ParallaxWrapper from "../../components/ParallaxWrapper";
-import { section2 } from "../../config/content";
+import { section2 } from "../../data/home";
 import reactLogo from "../../assets/img/react.png";
 
 import reduxLogo from "../../assets/img/redux.png";
@@ -13,6 +13,7 @@ import psLogo from "../../assets/img/ps.png";
 import nodeLogo from "../../assets/img/node.png";
 import mongoLogo from "../../assets/img/mongo.png";
 import expressLogo from "../../assets/img/express.png";
+import pythonLogo from "../../assets/img/python.png";
 import brushStrokeImage from "../../assets/img/brushStroke.png";
 
 const { design, engineering } = section2;
@@ -160,8 +161,9 @@ const Section2 = () => {
                 ...styles.brushStrokeBackground,
               }}
             >
-              <img src={mongoLogo} alt="react logo" width="200px" />
-              <img src={expressLogo} alt="photoshop logo" width="200px" />
+              <img src={expressLogo} alt="express js logo" width="200px" />
+              <img src={pythonLogo} alt="python logo" width="70px" />
+              <img src={mongoLogo} alt="mongo db logo" width="200px" />
             </Box>
           </ParallaxWrapper>
         </Grid>

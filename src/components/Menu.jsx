@@ -43,7 +43,6 @@ const styles = {
     my: 2,
     color: "white",
     display: "block",
-    ...this.navLink,
   },
   mobileMenu: {
     display: { xs: "block", md: "none" },
