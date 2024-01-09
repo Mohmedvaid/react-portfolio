@@ -16,6 +16,7 @@ const styles = {
     "&:hover": {
       boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
     },
+    // minHeight: "500px",
   },
   media: {
     height: 500, // Fixed height for all images
