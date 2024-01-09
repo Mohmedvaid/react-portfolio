@@ -1,3 +1,4 @@
+// src/components/ScratchOff.jsx
 import React, { useRef, useEffect } from "react";
 import Box from "@mui/material/Box";
 

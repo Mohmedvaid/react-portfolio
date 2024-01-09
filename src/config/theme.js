@@ -44,6 +44,12 @@ const theme = createTheme({
       },
     },
   },
+  fonts:{
+    primary: "Roboto, sans-serif",
+    secondary: "Roboto, sans-serif",
+    tertiary: "Roboto, sans-serif",
+    logo: "Roboto, sans-serif",
+  }
 });
 
 export default theme;

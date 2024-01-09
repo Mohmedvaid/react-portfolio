@@ -1,4 +1,4 @@
-// ParallaxWrapper.js
+// src/components/ParallaxWrapper.jsx
 import React, { useEffect } from "react";
 import { Parallax, useParallaxController } from "react-scroll-parallax";
 

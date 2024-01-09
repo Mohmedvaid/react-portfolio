@@ -1,3 +1,4 @@
+// src/components/TypingEffect.jsx
 import React, { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import { keyframes } from "@mui/system";

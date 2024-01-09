@@ -1,3 +1,4 @@
+// src/components/Menu.jsx
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -11,6 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
+import theme from "../config/theme";
 import useScrollCheck from "../hooks/useScrollCheck";
 import logo from "../assets/img/logo.png";
 
@@ -41,6 +43,7 @@ const styles = {
     my: 2,
     color: "white",
     display: "block",
+    ...this.navLink,
   },
   mobileMenu: {
     display: { xs: "block", md: "none" },
@@ -59,6 +62,14 @@ const styles = {
   },
   toolbarCentered: {
     justifyContent: "center",
+  },
+  navLink: {
+    fontSize: "1.2rem",
+    paddingRight: "40px",
+    fontFamily: theme.typography.fontFamily, // Use theme font
+    "&:hover": {
+      color: "grey",
+    },
   },
 };
 
@@ -119,6 +130,7 @@ function ResponsiveAppBar({ menuItems }) {
                 onClick={handleCloseNavMenu}
                 component={RouterLink}
                 to={page.path === "/" ? "/" : `/${page.path.toLowerCase()}`}
+                sx={styles.mobileMenuItem}
               >
                 {page.label}
               </MenuItem>

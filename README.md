@@ -1,1 +1,2 @@
 # MY PORTFOLIO
+awesome now lets cleanup, remove duplicates and create resusable for duplicate code and over all make sure everything is clean and should look like a professionals job if someone checks the code. also help me organize it better
