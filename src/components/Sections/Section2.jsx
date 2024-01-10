@@ -32,6 +32,7 @@ const sectionStyles = {
     strokeWidth: "2",
     fontSize: "50px",
     opacity: "0.5",
+    position: "absolute",
   },
   contentGrid: {
     display: "flex",
