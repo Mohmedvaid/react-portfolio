@@ -12,18 +12,9 @@ const styles = {
     justifyContent: "center", // Center container
     transition: "transform 0.5s ease", // Smooth transition for moving container
   },
-  title: {
-    fontFamily: "Stalinist One",
-  },
-  textTitle: {
-    fontFamily: "Stalinist One",
-    fontWeight: "bold",
-    fontSize: "1.5rem",
-    marginBottom: "20px",
-  },
 };
 
-const HomePage = () => {
+const Title = () => {
   const hasScrolled = useScrollCheck();
 
   return (
@@ -33,11 +24,11 @@ const HomePage = () => {
         transform: hasScrolled ? "translateX(-50%)" : "none", // Move left on scroll
       }}
     >
-      <Typography variant="h1" gutterBottom sx={styles.title}>
+      <Typography variant="h1" gutterBottom>
         {title}
       </Typography>
     </Box>
   );
 };
 
-export default HomePage;
+export default Title;

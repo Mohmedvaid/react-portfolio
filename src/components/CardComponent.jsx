@@ -1,12 +1,10 @@
 // src/components/CardComponent.jsx
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Button,
-} from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const styles = {
   wrapper: {
@@ -16,7 +14,6 @@ const styles = {
     "&:hover": {
       boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
     },
-    // minHeight: "500px",
   },
   media: {
     height: 500, // Fixed height for all images

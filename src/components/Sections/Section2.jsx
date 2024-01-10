@@ -6,74 +6,39 @@ import Typography from "@mui/material/Typography";
 import ZigzagLine from "../../components/SVG/ZigzagLine";
 import ParallaxWrapper from "../../components/ParallaxWrapper";
 import { section2 } from "../../data/home";
-import reactLogo from "../../assets/img/react.png";
 
-import reduxLogo from "../../assets/img/redux.png";
-import psLogo from "../../assets/img/ps.png";
-import nodeLogo from "../../assets/img/node.png";
-import mongoLogo from "../../assets/img/mongo.png";
-import expressLogo from "../../assets/img/express.png";
-import pythonLogo from "../../assets/img/python.png";
-import brushStrokeImage from "../../assets/img/brushStroke.png";
+// Icons
+import reactIcon from "../../assets/img/react.png";
+import reduxIcon from "../../assets/img/redux.png";
+import photoshopIcon from "../../assets/img/ps.png";
+import nodeIcon from "../../assets/img/node.png";
+import mongoIcon from "../../assets/img/mongo.png";
+import expressIcon from "../../assets/img/express.png";
+import pythonIcon from "../../assets/img/python.png";
+import brushStrokeBg from "../../assets/img/brushStroke.png";
 
 const { design, engineering } = section2;
 
-const styles = {
-  textTitle: {
-    fontFamily: "Stalinist One",
-    fontWeight: "bold",
-    fontSize: "2.5rem",
-    marginBottom: "20px",
-  },
-  description: {
-    marginBottom: "20px",
-  },
-  column: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  columnText: {
-    width: "48%", // Each column takes roughly half the space
-  },
-  newSection: {
+const sectionStyles = {
+  sectionContainer: {
     marginTop: "40px",
     padding: "20px",
     position: "relative",
-    height: "100vh", // Full viewport height
-    overflowX: "hidden", // Hide overflowing elements
+    height: "100vh",
+    overflow: "hidden",
   },
   zigzagLine: {
-    // Base style for SVG zigzag lines
-    stroke: "rgba(245, 245, 245, 0.7)", // Slightly transparent white
-    strokeWidth: "2", // Increase line thickness
-    fontSize: "50px", // Increase font size
-    opacity: "0.5", // Slightly transparent
+    stroke: "rgba(245, 245, 245, 0.7)",
+    strokeWidth: "2",
+    fontSize: "50px",
+    opacity: "0.5",
   },
-  zigzagPosition1: {
-    position: "absolute",
-    top: "10%", // Adjust positioning
-    left: "5%", // Adjust positioning
-    transform: "rotate(20deg)", // Example rotation
-  },
-  zigzagPosition2: {
-    position: "absolute",
-    top: "20%", // Adjust positioning
-    right: "17%", // Adjust positioning
-    transform: "rotate(30deg)", // Different example rotation
-  },
-  zigzagPosition3: {
-    position: "absolute",
-    top: "70%", // Adjust positioning
-    right: "70%", // Adjust positioning
-    transform: "rotate(-15deg)", // Different example rotation
-  },
-  secondSection: {
+  contentGrid: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: "100%", // Full viewport height
-    // add space between the two columns
+    height: "100%",
     gap: 5,
   },
   aboutText: {
@@ -82,88 +47,71 @@ const styles = {
     fontSize: "1rem",
     marginBottom: "20px",
   },
-  imagePlaceholder: {
+  imageContainer: {
     height: "150px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: "#f5f5f5",
     marginBottom: "20px",
     gap: 10,
+    backgroundImage: `url(${brushStrokeBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   },
-  designLogos: {
-    width: "100px",
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  brushStrokeBackground: {
-    backgroundImage: `url(${brushStrokeImage})`,
-    backgroundSize: "cover", // Ensure the image covers the entire element
-    backgroundPosition: "center", // Center the image
-    backgroundRepeat: "no-repeat", // Prevent the image from repeating
-  },
+  zigzagPositions: [
+    { top: "10%", left: "5%", transform: "rotate(20deg)" },
+    { top: "20%", right: "17%", transform: "rotate(30deg)" },
+    { top: "70%", right: "70%", transform: "rotate(-15deg)" },
+  ],
 };
 
 const Section2 = () => {
   return (
-    <Box position="relative" sx={styles.newSection}>
-      <ZigzagLine style={{ ...styles.zigzagLine, ...styles.zigzagPosition1 }} />
-      <ZigzagLine style={{ ...styles.zigzagLine, ...styles.zigzagPosition2 }} />
-      <ZigzagLine style={{ ...styles.zigzagLine, ...styles.zigzagPosition3 }} />
-      {/* section 2 */}
-      <Grid container sx={styles.secondSection}>
-        <Grid item xs={12} md={6} sx={styles.secondSectionItem}>
-          {/* title */}
-          {/* placeholder image */}
-          {/* add shadow */}
+    <Box sx={sectionStyles.sectionContainer}>
+      {sectionStyles.zigzagPositions.map((position, index) => (
+        <ZigzagLine
+          key={index}
+          style={{ ...sectionStyles.zigzagLine, ...position }}
+        />
+      ))}
+      <Grid container sx={sectionStyles.contentGrid}>
+        <Grid item xs={12} md={6}>
           <ParallaxWrapper
             speed={10}
             translateY={[-20, 20]}
             translateX={["70px", "1px"]}
           >
-            <Box
-              sx={{
-                ...styles.imagePlaceholder,
-                ...styles.brushStrokeBackground,
-              }}
-            >
-              <img src={nodeLogo} alt="react logo" width="110px" />
-              <img src={reactLogo} alt="react logo" width="70px" />
-              <img src={reduxLogo} alt="photoshop logo" width="70px" />
-              <img src={psLogo} alt="redux logo" width="70px" />
+            <Box sx={sectionStyles.imageContainer}>
+              <img src={nodeIcon} alt="Node.js logo" width="110px" />
+              <img src={reactIcon} alt="React logo" width="70px" />
+              <img src={reduxIcon} alt="Redux logo" width="70px" />
+              <img src={photoshopIcon} alt="Photoshop logo" width="70px" />
             </Box>
           </ParallaxWrapper>
-
-          <Typography sx={styles.textTitle} align="center">
+          <Typography variant="h2" align="center" gutterBottom>
             {design.title}
           </Typography>
-          <Typography sx={styles.aboutText} align="center">
+          <Typography sx={sectionStyles.aboutText} align="center">
             {design.text}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} sx={styles.secondSectionItem}>
-          {/* title */}
-          <Typography sx={styles.textTitle} align="center">
+        <Grid item xs={12} md={6}>
+          <Typography variant="h2" align="center" gutterBottom>
             {engineering.title}
           </Typography>
-          <Typography sx={styles.aboutText} align="center">
+          <Typography sx={sectionStyles.aboutText} align="center">
             {engineering.text}
           </Typography>
-          {/* placeholder image */}
           <ParallaxWrapper
             speed={10}
             translateY={[-20, 20]}
             translateX={["1px", "70px"]}
           >
-            <Box
-              sx={{
-                ...styles.imagePlaceholder,
-                ...styles.brushStrokeBackground,
-              }}
-            >
-              <img src={expressLogo} alt="express js logo" width="200px" />
-              <img src={pythonLogo} alt="python logo" width="70px" />
-              <img src={mongoLogo} alt="mongo db logo" width="200px" />
+            <Box sx={sectionStyles.imageContainer}>
+              <img src={expressIcon} alt="Express.js logo" width="200px" />
+              <img src={pythonIcon} alt="Python logo" width="70px" />
+              <img src={mongoIcon} alt="MongoDB logo" width="200px" />
             </Box>
           </ParallaxWrapper>
         </Grid>

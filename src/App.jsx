@@ -12,13 +12,14 @@ import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import Loader from "./components/Loader";
 
-import "./global/styles.css";
+import "./global/styles.css"; // bg gradient
 
 new ghostCursor();
 
 // lazy load pages
 const PortfolioPage = React.lazy(() => import("./pages/PortfolioPage"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
+const Fun = React.lazy(() => import("./pages/Fun"));
 
 const menuItems = [
   { path: "/", label: "Home", id: 1 },
@@ -28,44 +29,54 @@ const menuItems = [
     id: 2,
   },
   { path: "contact", label: "Contact", id: 3 },
+  { path: "fun", label: "Fun", id: 4 },
 ];
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Suspense fallback={<Loader />}>
-      <Box className="animatedBackground">
-        <ParallaxProvider>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout menuItems={menuItems}>
-                  <HomePage />
-                </Layout>
-              }
-            />
-            <Route
-              path="portfolio"
-              element={
-                <Layout menuItems={menuItems}>
-                  <PortfolioPage />
-                </Layout>
-              }
-            />
-            <Route
-              path="contact"
-              element={
-                <Layout menuItems={menuItems}>
-                  <ContactPage />
-                </Layout>
-              }
-            />
-          </Routes>
-        </ParallaxProvider>
-      </Box>
-    </Suspense>
-  </ThemeProvider>
-);
-
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Suspense fallback={<Loader />}>
+        <Box className="animatedBackground">
+          <ParallaxProvider>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Layout menuItems={menuItems}>
+                    <HomePage />
+                  </Layout>
+                }
+              />
+              <Route
+                path="portfolio"
+                element={
+                  <Layout menuItems={menuItems}>
+                    <PortfolioPage />
+                  </Layout>
+                }
+              />
+              <Route
+                path="contact"
+                element={
+                  <Layout menuItems={menuItems}>
+                    <ContactPage />
+                  </Layout>
+                }
+              />
+              <Route
+                path="fun"
+                element={
+                  <Layout menuItems={menuItems}>
+                    <Fun />
+                  </Layout>
+                }
+              />
+            </Routes>
+          </ParallaxProvider>
+        </Box>
+      </Suspense>
+    </ThemeProvider>
+  );
+};
 export default App;

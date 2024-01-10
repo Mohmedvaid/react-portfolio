@@ -1,12 +1,17 @@
 // src/pages/ContactPage.jsx
 import React from "react";
-import { Box, Typography, Link, Grid, Paper, IconButton } from "@mui/material";
+
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import IconButton from "@mui/material/IconButton";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
 
-import Page from "../components/Page";
+import CardWithIcon from "../components/CardWithIcon";
 import FadeInAnimation from "../components/Animations/FadeInAnimation";
 import SlideInAnimation from "../components/Animations/SlideInAnimation";
 import ZoomInAnimation from "../components/Animations/ZoomInAnimation";
@@ -20,17 +25,11 @@ const linkedIn = contact.linkedIn;
 const github = contact.github;
 const resumeDoc = contact.resumeDoc;
 const resumePDF = contact.resumePDF;
-const styles = {
-  title: {
-    marginBottom: 4,
-    fontWeight: "bold",
-  },
-};
 
 const Contact = () => (
-  <Page>
+  <>
     <FadeInAnimation>
-      <Typography variant="h4" textAlign="center" sx={styles.title}>
+      <Typography variant="h1" textAlign="center" gutterBottom>
         {title}
       </Typography>
     </FadeInAnimation>
@@ -38,7 +37,7 @@ const Contact = () => (
     <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12} md={6} lg={4}>
         <ZoomInAnimation>
-          <ItemWithIcon
+          <CardWithIcon
             icon={<EmailIcon fontSize="large" />}
             label="Email"
             content={<Link href={emailHref}>{email}</Link>}
@@ -47,7 +46,7 @@ const Contact = () => (
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
         <SlideInAnimation direction="right">
-          <ItemWithIcon
+          <CardWithIcon
             icon={<DescriptionIcon fontSize="large" />}
             label="PDF Resume (Open In Browser)"
             content={
@@ -60,7 +59,7 @@ const Contact = () => (
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
         <RotateInAnimation>
-          <ItemWithIcon
+          <CardWithIcon
             icon={<DescriptionIcon fontSize="large" />}
             label="Word Doc Resume (Download)"
             content={
@@ -96,20 +95,7 @@ const Contact = () => (
         </IconButton>
       </FadeInAnimation>
     </Box>
-  </Page>
-);
-
-const ItemWithIcon = ({ icon, label, content }) => (
-  <Paper
-    elevation={3}
-    sx={{ p: 2, display: "flex", alignItems: "center", gap: 2 }}
-  >
-    {icon}
-    <Box>
-      <Typography variant="subtitle1">{label}</Typography>
-      <Typography variant="body1">{content}</Typography>
-    </Box>
-  </Paper>
+  </>
 );
 
 export default Contact;

@@ -16,9 +16,18 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "Silkscreen, sans-serif",
     h1: {
+      fontFamily: "Stalinist One",
       fontWeight: 700,
+      fontSize: "3.5rem",
+    },
+    h2: {
+      fontFamily: "Stalinist One",
+      fontSize: "2.2rem",
+    },
+    h3: {
+      fontSize: "1.8rem",
     },
     h6: {
       fontWeight: 500,
@@ -31,8 +40,10 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: "#2e3e4e", // Darker shade for AppBar
-          color: "#ffffff",
+          backgroundColor: "rgba(144, 238, 144, 0.3)", // Light greenish background, mostly transparent
+          boxShadow: "none",
+          transition: "all 0.5s ease",
+          borderRadius: "0", // No rounded corners
         },
       },
     },
@@ -44,12 +55,6 @@ const theme = createTheme({
       },
     },
   },
-  fonts:{
-    primary: "Roboto, sans-serif",
-    secondary: "Roboto, sans-serif",
-    tertiary: "Roboto, sans-serif",
-    logo: "Roboto, sans-serif",
-  }
 });
 
 export default theme;

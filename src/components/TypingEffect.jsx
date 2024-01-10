@@ -15,7 +15,7 @@ const styles = {
   },
 };
 
-const TypingEffect = ({ children, speed = 100, sx }) => {
+const TypingEffect = ({ variant, children, speed = 100, sx }) => {
   const [typedText, setTypedText] = useState("");
   const text = React.Children.toArray(children).join("");
 
@@ -30,7 +30,7 @@ const TypingEffect = ({ children, speed = 100, sx }) => {
   }, [text, typedText, speed]);
 
   return (
-    <Typography component="span" sx={{ ...sx, display: "inline" }}>
+    <Typography component="span" sx={{ ...sx, display: "inline" }} variant={variant}>
       {typedText}
       <Typography component="span" sx={{ ...styles.cursor, ...sx }}>
         |
