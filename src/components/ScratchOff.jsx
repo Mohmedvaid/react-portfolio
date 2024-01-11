@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 const ScratchOff = ({
   imageSrc,
   brushSize = 50,
-  revealImageSrc,
+  revealCode,
   containerWidth,
   containerHeight,
 }) => {
@@ -15,7 +15,7 @@ const ScratchOff = ({
     position: "relative",
     width: containerWidth || "100%", // width from props or default
     height: containerHeight || "100%", // height from props or default
-    overflow: "hidden", // to ensure contents do not overflow
+    // overflow: "hidden", // to ensure contents do not overflow
   };
 
   const canvasStyles = {
@@ -24,13 +24,24 @@ const ScratchOff = ({
     height: "100%",
     top: 0,
     left: 0,
-    borderRadius: "15px"
+    borderRadius: "15px",
   };
 
-  const revealedImageStyles = {
+  const revealedCodeStyles = {
     ...canvasStyles,
-    objectFit: "cover", // ensures the image covers the area
-    zIndex: -1, // places it behind the canvas
+    fontFamily: "monospace",
+    fontSize: "0.8rem",
+    color: "white",
+    backgroundColor: "black",
+    overflow: "auto",
+    zIndex: -1,
+    padding: "10px",
+    boxSizing: "border-box",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    wordWrap: "break-word", // Ensures text wraps
+    whiteSpace: "pre-wrap", // Allows wrapping
   };
 
   useEffect(() => {
@@ -100,7 +111,8 @@ const ScratchOff = ({
 
   return (
     <Box sx={containerStyles}>
-      <img src={revealImageSrc} alt="Revealed" style={revealedImageStyles} />
+      {/* <img src={revealImageSrc} alt="Revealed" style={revealedImageStyles} /> */}
+      <div style={revealedCodeStyles}>{revealCode}</div>
       <canvas ref={canvasRef} style={canvasStyles}></canvas>
     </Box>
   );
