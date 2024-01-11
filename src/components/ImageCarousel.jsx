@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, styled } from "@mui/material";
 
+
 const TickerContainer = styled(Box)(({ orientation }) => ({
   overflow: "hidden",
   position: "relative",
@@ -12,10 +13,14 @@ const TickerContainer = styled(Box)(({ orientation }) => ({
 }));
 
 const Image = styled("img")(({ orientation }) => ({
-  height: orientation === "vertical" ? "auto" : "70px",
-  width: orientation === "vertical" ? "100px" : "auto",
-  display: "inline-block",
+  height: orientation === "vertical" ? "auto" : "100px",
+  width: orientation === "vertical" ? "150px" : "auto",
+  display: "block", // Changed to 'block' to eliminate extra space below images
   margin: orientation === "vertical" ? "50px auto" : "0 30px",
+  background: "#fff", // Adding white background
+  padding: "10px", // Adding some padding around the image
+  boxSizing: "border-box", // Ensure padding doesn't affect the overall dimensions
+  borderRadius: "10px", // Rounded corners for the background
 }));
 
 const TickerContent = styled(Box)(({ orientation }) => ({

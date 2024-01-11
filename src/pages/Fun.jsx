@@ -7,6 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 import HandGesture from "../components/HandGesture";
 
@@ -16,7 +17,7 @@ const FunPage = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <>
+    <Box sx={{ height: "100vh" }} component="section" id="fun">
       <IconButton onClick={handleClickOpen}>
         <InfoIcon />
       </IconButton>
@@ -42,7 +43,7 @@ const FunPage = () => {
         </DialogActions>
       </Dialog>
       <HandGesture />
-    </>
+    </Box>
   );
 };
 

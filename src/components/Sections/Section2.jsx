@@ -11,25 +11,44 @@ import ImageCarousel from "../../components/ImageCarousel";
 import { section2 } from "../../data/home";
 
 // Icons
-import reactIcon from "../../assets/img/react.png";
-import reduxIcon from "../../assets/img/redux.png";
+// import reactIcon from "../../assets/img/react.png";
+// import reduxIcon from "../../assets/img/redux.png";
 import photoshopIcon from "../../assets/img/ps.png";
-import nodeIcon from "../../assets/img/node.png";
-import mongoIcon from "../../assets/img/mongo.png";
-import expressIcon from "../../assets/img/express.png";
-import pythonIcon from "../../assets/img/python.png";
-import brushStrokeBg from "../../assets/img/brushStroke.png";
+// import nodeIcon from "../../assets/img/node.png";
+// import mongoIcon from "../../assets/img/mongo.png";
+// import expressIcon from "../../assets/img/express.png";
+// import pythonIcon from "../../assets/img/python.png";
+// import brushStrokeBg from "../../assets/img/brushStroke.png";
+
+import reactIcon from "../../assets/img/new/react.png";
+import reduxIcon from "../../assets/img/new/redux.png";
+import nodeIcon from "../../assets/img/new/nodejs.png";
+import mongoIcon from "../../assets/img/new/mongo.png";
+import pythonIcon from "../../assets/img/new/python.png";
+import awsIcon from "../../assets/img/new/aws.png";
+import azureIcon from "../../assets/img/new/azure.png";
+import devopsIcon from "../../assets/img/new/devops.webp";
+import linuxIcon from "../../assets/img/new/linux.png";
+import neuralNetworkIcon from "../../assets/img/new/nn.png";
+import machineLearningIcon from "../../assets/img/new/ml.png";
+import jsIcon from "../../assets/img/new/js.png";
 
 const { design, engineering } = section2;
 
 const carouselImages = [
+  jsIcon,
   reactIcon,
-  reduxIcon,
-  photoshopIcon,
   nodeIcon,
-  mongoIcon,
-  expressIcon,
+  reduxIcon,
   pythonIcon,
+  mongoIcon,
+  awsIcon,
+  azureIcon,
+  devopsIcon,
+  linuxIcon,
+  neuralNetworkIcon,
+  machineLearningIcon,
+  photoshopIcon,
 ];
 
 const sectionStyles = {
@@ -61,18 +80,18 @@ const sectionStyles = {
     fontSize: "1rem",
     marginBottom: "20px",
   },
-  imageContainer: {
-    height: "150px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "20px",
-    gap: 10,
-    backgroundImage: `url(${brushStrokeBg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  },
+  // imageContainer: {
+  //   height: "150px",
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   marginBottom: "20px",
+  //   gap: 10,
+  //   backgroundImage: `url(${brushStrokeBg})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  // },
   zigzagPositions: [
     { top: "10%", left: "5%", transform: "rotate(20deg)" },
     { top: "20%", right: "17%", transform: "rotate(30deg)" },
