@@ -9,13 +9,6 @@ const styles = {
   wrapper: {
     margin: "100px 0",
   },
-  page: {
-    flexGrow: 1,
-    marginTop: 4,
-    padding: "20px",
-    height: "100vh", // Full viewport height
-    paddingBottom: "100px",
-  },
 };
 
 const Layout = ({ children, menuItems, showMenu = true }) => {
@@ -29,9 +22,7 @@ const Layout = ({ children, menuItems, showMenu = true }) => {
   return (
     <Box sx={styles.wrapper}>
       {showMenu && <Menu menuItems={menuItems} value={value} />}
-      <Container sx={styles.root} maxWidth="none">
-        {children}
-      </Container>
+      <Container maxWidth="xl">{children}</Container>
     </Box>
   );
 };

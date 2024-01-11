@@ -1,8 +1,7 @@
 const title = `I'm Mohmed`;
 const description = {
   title: `Software Engineer`,
-  text: ` I like to develop robust and scalable software products with outstanding
-        user experiences.`,
+  text: `As a Full Stack Web Developer based in Chicago, I blend my computer science background with specialized training from Northwestern University to create impactful web applications. My expertise spans JavaScript, React.js, Node.js, Python, and other key technologies. Focused on innovative problem-solving and efficient design, I'm keen on exploring diverse entrepreneurial challenges and collaborating on solutions that matter.`,
 };
 
 const section1 = {}; // nothing here for now

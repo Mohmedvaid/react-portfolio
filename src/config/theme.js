@@ -10,6 +10,10 @@ const theme = createTheme({
     primary: {
       main: "#56c288", // Soft green for primary actions and highlights
     },
+    cta: {
+      main: "#56c288", // Brighter green for call-to-action buttons
+      hover: "#57d299", // Slightly darker on hover
+    },
     text: {
       primary: "#ffffff",
       secondary: "#a1a1a1",

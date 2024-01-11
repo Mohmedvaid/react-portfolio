@@ -2,9 +2,12 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 import ZigzagLine from "../../components/SVG/ZigzagLine";
 import ParallaxWrapper from "../../components/ParallaxWrapper";
+import ImageCarousel from "../../components/ImageCarousel";
 import { section2 } from "../../data/home";
 
 // Icons
@@ -19,13 +22,31 @@ import brushStrokeBg from "../../assets/img/brushStroke.png";
 
 const { design, engineering } = section2;
 
+const carouselImages = [
+  reactIcon,
+  reduxIcon,
+  photoshopIcon,
+  nodeIcon,
+  mongoIcon,
+  expressIcon,
+  pythonIcon,
+];
+
 const sectionStyles = {
   sectionContainer: {
     marginTop: "40px",
     padding: "20px",
     position: "relative",
     height: "100vh",
-    overflow: "hidden",
+    display: "flex", // Flex container
+    alignItems: "center", // Centers items vertically in the container
+    justifyContent: "center", // Centers items horizontally in the container
+  },
+  subSectionContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
   zigzagLine: {
     stroke: "rgba(245, 245, 245, 0.7)",
@@ -33,14 +54,6 @@ const sectionStyles = {
     fontSize: "50px",
     opacity: "0.5",
     position: "absolute",
-  },
-  contentGrid: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
-    gap: 5,
   },
   aboutText: {
     fontFamily: "Silkscreen, sans-serif",
@@ -68,6 +81,9 @@ const sectionStyles = {
 };
 
 const Section2 = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box sx={sectionStyles.sectionContainer}>
       {sectionStyles.zigzagPositions.map((position, index) => (
@@ -76,20 +92,9 @@ const Section2 = () => {
           style={{ ...sectionStyles.zigzagLine, ...position }}
         />
       ))}
-      <Grid container sx={sectionStyles.contentGrid}>
-        <Grid item xs={12} md={6}>
-          <ParallaxWrapper
-            speed={10}
-            translateY={[-20, 20]}
-            translateX={["70px", "1px"]}
-          >
-            <Box sx={sectionStyles.imageContainer}>
-              <img src={nodeIcon} alt="Node.js logo" width="110px" />
-              <img src={reactIcon} alt="React logo" width="70px" />
-              <img src={reduxIcon} alt="Redux logo" width="70px" />
-              <img src={photoshopIcon} alt="Photoshop logo" width="70px" />
-            </Box>
-          </ParallaxWrapper>
+      {/* DESIGN */}
+      <Grid container spacing={2} sx={sectionStyles.contentGrid}>
+        <Grid item xs={12} md={4} sx={sectionStyles.subSectionContainer}>
           <Typography variant="h2" align="center" gutterBottom>
             {design.title}
           </Typography>
@@ -97,24 +102,23 @@ const Section2 = () => {
             {design.text}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6}>
+
+        {/* CAROUSEL */}
+        <Grid item xs={12} md={4} sx={sectionStyles.carouselContainer} gap={2}>
+          <ImageCarousel
+            images={carouselImages}
+            orientation={isMobile ? "horizontal" : "vertical"}
+          />
+        </Grid>
+
+        {/* ENGINEERING */}
+        <Grid item xs={12} md={4} sx={sectionStyles.subSectionContainer}>
           <Typography variant="h2" align="center" gutterBottom>
             {engineering.title}
           </Typography>
           <Typography sx={sectionStyles.aboutText} align="center">
             {engineering.text}
           </Typography>
-          <ParallaxWrapper
-            speed={10}
-            translateY={[-20, 20]}
-            translateX={["1px", "70px"]}
-          >
-            <Box sx={sectionStyles.imageContainer}>
-              <img src={expressIcon} alt="Express.js logo" width="200px" />
-              <img src={pythonIcon} alt="Python logo" width="70px" />
-              <img src={mongoIcon} alt="MongoDB logo" width="200px" />
-            </Box>
-          </ParallaxWrapper>
         </Grid>
       </Grid>
     </Box>

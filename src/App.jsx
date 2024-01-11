@@ -29,7 +29,7 @@ const menuItems = [
     id: 2,
   },
   { path: "contact", label: "Contact", id: 3 },
-  { path: "fun", label: "Fun", id: 4 },
+  { path: "fun", label: "Fun", id: 4, cta: true },
 ];
 
 const App = () => {

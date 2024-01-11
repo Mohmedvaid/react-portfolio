@@ -9,9 +9,8 @@ body {
     #69232b  /* Burgundy for contrast */
   );
   background-size: 360% 360%;
-  animation: gradient 20s ease infinite;
-  height: "100%";
-  overflow-x: hidden;
+  animation: gradient 30s ease infinite;
+  height: 100vh;
 }
 
 @keyframes gradient {

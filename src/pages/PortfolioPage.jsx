@@ -8,7 +8,7 @@ import projects from "../data/portfolio";
 const PortfolioPage = () => (
   <Grid container spacing={2}>
     {projects.map((project, index) => (
-      <Grid item xs={12} sm={6} key={index}>
+      <Grid item sm={12} md={6} lg={4} key={index}>
         <CardComponent
           title={project.name}
           content={project.description}

@@ -1,97 +1,188 @@
-Hand Pose Detection
-This package provides models for running real-time hand pose detection.
+React Responsive Carousel
+npm version Build Status FOSSA Status
 
-Currently, we provide 1 model option:
+Powerful, lightweight and fully customizable carousel component for React apps.
 
-MediaPipe:
+Important
+I don't have any time available to keep maintaining this package. If you have any request, try to sort it within the community. I'm able to merge pull requests that look safe from time to time but no commitment on timelines here. Feel free to fork it and publish under other name if you are in a hurry or to use another component.
+
+Features
+Responsive
+Mobile friendly
+Swipe to slide
+Mouse emulating touch
+Server side rendering compatible
+Keyboard navigation
+Custom animation duration
+Auto play w/ custom interval
+Infinite loop
+Horizontal or Vertical directions
+Supports images, videos, text content or anything you want. Each direct child represents one slide!
+Supports external controls
+Highly customizable:
+Custom thumbs
+Custom arrows
+Custom indicators
+Custom status
+Custom animation handlers
+Important links:
+Codesandbox playground
+Storybook
+Changelog
+Before contributing
+Troubleshooting
 Demo
+http://leandrowd.github.io/react-responsive-carousel/
 
-MediaPipe Hands can detect multiple hands, each hand contains 21 3D hand keypoints.
+Check it out these cool demos created using storybook. The source code for each example is available here
 
-More background information about the model, as well as its performance characteristics on different datasets, can be found here: Model Card
+Customize it yourself:
 
-Table of Contents
-How to Run It
-Keypoint Diagram
-Example Code and Demos
-How to Run It
-In general there are two steps:
+Codesandbox: https://codesandbox.io/s/lp602ljjj7
+Installing as a package
+yarn add react-responsive-carousel
 
-You first create a detector by choosing one of the models from SupportedModels, including MediaPipeHands.
+Usage
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-For example:
+class DemoCarousel extends Component {
+    render() {
+        return (
+            <Carousel>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
+        );
+    }
+});
 
-const model = handPoseDetection.SupportedModels.MediaPipeHands;
-const detectorConfig = {
-  runtime: 'mediapipe', // or 'tfjs',
-  solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/hands',
-  modelType: 'full'
-}
-const detector = await handPoseDetection.createDetector(model, detectorConfig);
-Then you can use the detector to detect hands.
+ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
 
-const hands = await detector.estimateHands(image);
-The returned hands list contains detected hands for each hand in the image. If the model cannot detect any hands, the list will be empty.
+// Don't forget to include the css in your page
 
-For each hand, it contains a prediction of the handedness (left or right), a confidence score of this prediction, as well as an array of keypoints. MediaPipeHands returns 21 keypoints. Each keypoint contains x and y, as well as a name. In addition, an array of 3D keypoints is returned.
+// Using webpack or parcel with a style loader
+// import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-Example output:
+// Using html tag:
+// <link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
+Props
+Name	Value	Description
+ariaLabel	string	Define the aria-label attribute for the root carousel element. The default is undefined, skipping the attribute from markup.
+axis	'horizontal', 'vertical'	Define the direction of the slider, defaults to 'horizontal'.
+autoFocus	boolean	Force focus on the carousel when it renders.
+autoPlay	boolean	Change the slide automatically based on interval prop.
+centerMode	boolean	Center the current item and set the slide width based on centerSlidePercentage.
+centerSlidePercentage	number	Define the width percentage relative to the carousel width when centerMode is true.
+dynamicHeight	boolean	The height of the items will not be fixed.
+emulateTouch	boolean	Enable swipe on non-touch screens when swipeable is true.
+infiniteLoop	boolean	Going after the last item will move back to the first slide.
+interval	number	Interval in milliseconds to automatically go to the next item when autoPlay is true, defaults to 3000.
+labels	object	Apply aria-label on carousel with an object with the properties leftArrow, rightArrow and item. The default is {leftArrow: 'previous slide / item', rightArrow: 'next slide / item', item: 'slide item'}.
+onClickItem	function	Callback to handle a click event on a slide, receives the current index and item as arguments.
+onClickThumb	function	Callback to handle a click event on a thumb, receives the current index and item as arguments.
+onChange	function	Callback to handle every time the selected item changes, receives the current index and item as arguments.
+onSwipeStart	function	Callback to handle when the swipe starts, receives a touch event as argument.
+onSwipeEnd	function	Callback to handle when the swipe ends, receives a touch event as argument.
+onSwipeMove	function	Callback triggered on every movement while swiping, receives a touch event as argument.
+preventMovementUntilSwipeScrollTolerance	boolean	Don't let the carousel scroll until the user swipe to the value specified on swipeScrollTolerance.
+renderArrowPrev	function	Render custom previous arrow. Receives a click handler, a boolean that shows if there's a previous item, and the accessibility label as arguments.
+renderArrowNext	function	Render custom previous arrow. Receives a click handler, a boolean that shows if there's a next item, and the accessibility label as arguments.
+renderIndicator	function	Render custom indicator. Receives a click handler, a boolean that shows if the item is selected, the item index, and the accessibility label as arguments.
+renderItem	function	Render a custom item. Receives an item of the carousel, and an object with the isSelected property as arguments.
+renderThumbs	function	Render prop to show the thumbs, receives the carousel items as argument. Get the img tag of each item of the slider, and render it by default.
+selectedItem	number	Set the selected item, defaults to 0.
+showArrows	boolean	Enable previous and next arrow, defaults to true.
+showStatus	boolean	Enable status of the current item to the total, defaults to true.
+showIndicators	boolean	Enable indicators to select items, defaults to true.
+showThumbs	boolean	Enable thumbs, defaults to true.
+statusFormatter	function	Formatter that returns the status as a string, receives the current item and the total count as arguments. Defaults to {currentItem} of {total} format.
+stopOnHover	boolean	The slide will not change by autoPlay on hover, defaults to true.
+swipeable	boolean	Enable the user to swipe the carousel, defaults to true.
+swipeScrollTolerance	number	How many pixels it's needed to change the slide when swiping, defaults to 5.
+thumbWidth	number	Width of the thumb, defaults to 80.
+transitionTime	number	Duration of the animation of changing slides.
+useKeyboardArrows	boolean	Enable the arrows to move the slider when focused.
+verticalSwipe	'natural', 'standard'	Set the mode of swipe when the axis is 'vertical'. The default is 'standard'.
+width	number or string	The width of the carousel, defaults to 100%.
+Customizing
+Items (Slides)
+By default, each slide will be rendered as passed as children. If you need to customize them, use the prop renderItem.
 
-[
-  {
-    score: 0.8,
-    handedness: ‘Right’,
-    keypoints: [
-      {x: 105, y: 107, name: "wrist"},
-      {x: 108, y: 160, name: "pinky_finger_tip"},
-      ...
-    ],
-    keypoints3D: [
-      {x: 0.00388, y: -0.0205, z: 0.0217, name: "wrist"},
-      {x: -0.025138, y: -0.0255, z: -0.0051, name: "pinky_finger_tip"},
-      ...
-    ]
-  }
-]
-The score ranges from 0 to 1. It represents the model's confidence of the detected hand.
+renderItem: (item: React.ReactNode, options?: { isSelected: boolean }) => React.ReactNode;
+Thumbs
+By default, thumbs are generated extracting the images in each slide. If you don't have images on your slides or if you prefer a different thumbnail, use the method renderThumbs to return a new list of images to be used as thumbs.
 
-handedness is set to either 'Left' or 'Right', which is the model prediction of the detected hand's handedness.
+renderThumbs: (children: React.ReactChild[]) => React.ReactChild[]
+Arrows
+By default, simple arrows are rendered on each side. If you need to customize them and the css is not enough, use the renderArrowPrev and renderArrowNext. The click handler is passed as argument to the prop and needs to be added as click handler in the custom arrow.
 
-For the keypoints, x and y represent the actual keypoint position in the image pixel space.
+renderArrowPrev: (clickHandler: () => void, hasPrev: boolean, label: string) => React.ReactNode;
+renderArrowNext: (clickHandler: () => void, hasNext: boolean, label: string) => React.ReactNode;
+Indicators
+By default, indicators will be rendered as those small little dots in the bottom part of the carousel. To customize them, use the renderIndicator prop.
 
-For the keypoints3D, x, y and z represent absolute distance in a metric scale, where the origin is formed as an average between the first knuckles of index, middle, ring and pinky fingers.
+renderIndicator: (
+    clickHandler: (e: React.MouseEvent | React.KeyboardEvent) => void,
+    isSelected: boolean,
+    index: number,
+    label: string
+) => React.ReactNode;
+Take full control of the carousel
+If none of the previous options are enough, you can build your own controls for the carousel. Check an example at http://react-responsive-carousel.js.org/storybook/?path=/story/02-advanced--with-external-controls
 
-The name provides a label for each keypoint, such as 'wrist', 'pinky_finger_tip', etc.
+Custom Animations
+By default, the carousel uses the traditional 'slide' style animation. There is also a built in fade animation, which can be used by passing 'fade' to the animationHandler prop. *note: the 'fade' animation does not support swiping animations, so you may want to set swipeable to false
 
-Refer to each model's documentation for specific configurations for the model and their performance.
+If you would like something completely custom, you can pass custom animation handler functions to animationHandler, swipeAnimationHandler, and stopSwipingHandler. The animation handler functions accept props and state, and return styles for the contain list, default slide style, selected slide style, and previous slide style. Take a look at the fade animation handler for an idea of how they work:
 
-MediaPipeHands MediaPipe Documentation
+const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerResponse => {
+    const transitionTime = props.transitionTime + 'ms';
+    const transitionTimingFunction = 'ease-in-out';
 
-MediaPipeHands TFJS Documentation
+    let slideStyle: React.CSSProperties = {
+        position: 'absolute',
+        display: 'block',
+        zIndex: -2,
+        minHeight: '100%',
+        opacity: 0,
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: 0,
+        transitionTimingFunction: transitionTimingFunction,
+        msTransitionTimingFunction: transitionTimingFunction,
+        MozTransitionTimingFunction: transitionTimingFunction,
+        WebkitTransitionTimingFunction: transitionTimingFunction,
+        OTransitionTimingFunction: transitionTimingFunction,
+    };
 
-Keypoint Diagram
-See the diagram below for what those keypoints are and their index in the array.
+    if (!state.swiping) {
+        slideStyle = {
+            ...slideStyle,
+            WebkitTransitionDuration: transitionTime,
+            MozTransitionDuration: transitionTime,
+            OTransitionDuration: transitionTime,
+            transitionDuration: transitionTime,
+            msTransitionDuration: transitionTime,
+        };
+    }
 
-MediaPipe Hands Keypoints: Used in MediaPipe Hands
-MediaPipeHands Keypoints 0: wrist
-1: thumb_cmc
-2: thumb_mcp
-3: thumb_ip
-4: thumb_tip
-5: index_finger_mcp
-6: index_finger_pip
-7: index_finger_dip
-8: index_finger_tip
-9: middle_finger_mcp
-10: middle_finger_pip
-11: middle_finger_dip
-12: middle_finger_tip
-13: ring_finger_mcp
-14: ring_finger_pip
-15: ring_finger_dip
-16: ring_finger_tip
-17: pinky_finger_mcp
-18: pinky_finger_pip
-19: pinky_finger_dip
-20: pinky_finger_tip
-
+    return {
+        slideStyle,
+        selectedStyle: { ...slideStyle, opacity: 1, position: 'relative' },
+        prevStyle: { ...slideStyle },
+    };
+};

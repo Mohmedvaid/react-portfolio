@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
+import theme from "../config/theme";
 import useScrollCheck from "../hooks/useScrollCheck";
 import logo from "../assets/img/logo.png";
 
@@ -39,6 +40,17 @@ const styles = {
   toolbarCentered: {
     justifyContent: "center",
   },
+  desktopButton: {
+    fontSize: "1rem", // Larger font size for desktop menu links
+    margin: "0 10px", // Add some margin for spacing
+  },
+  ctaButton: {
+    backgroundColor: theme.palette.cta.main,
+    margin: "0 10px",
+    "&:hover": {
+      backgroundColor: theme.palette.cta.hover,
+    },
+  },
 };
 
 function ResponsiveAppBar({ menuItems }) {
@@ -47,6 +59,7 @@ function ResponsiveAppBar({ menuItems }) {
 
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
   const handleCloseNavMenu = () => setAnchorElNav(null);
+  const isCta = (menuItem) => menuItem.cta === true;
 
   return (
     <AppBar
@@ -111,6 +124,11 @@ function ResponsiveAppBar({ menuItems }) {
                 key={page.id}
                 component={RouterLink}
                 to={page.path === "/" ? "/" : `/${page.path.toLowerCase()}`}
+                sx={
+                  isCta(page)
+                    ? styles.ctaButton
+                    : { ...styles.desktopButton, color: "white" }
+                }
               >
                 {page.label}
               </Button>

@@ -1,4 +1,3 @@
-// Section3.js
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -10,17 +9,11 @@ import Button from "@mui/material/Button";
 import CardComponent from "../../components/CardComponent";
 import projects from "../../data/portfolio";
 
-const fewProjects = projects.slice(0, 2);
-
-const styles = {
-  root: {
-    pb: 10,
-  },
-};
+const fewProjects = projects.slice(0, 3); // Assuming you have at least 3 projects
 
 const Section3 = () => (
-  <Box component="section" py={10} id="portfolio" sx={styles.root}>
-    <Grid container spacing={2}>
+  <Box component="section" id="portfolio" sx={{ padding: 2 }}>
+    <Grid container spacing={4}>
       <Grid item xs={12}>
         <Typography variant="h2" textAlign="center" gutterBottom>
           Portfolio
@@ -28,7 +21,8 @@ const Section3 = () => (
       </Grid>
 
       {fewProjects.map((project, index) => (
-        <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
+        // Adjusted breakpoints for responsive layout
+        <Grid item sm={12} md={6} lg={4} key={project.id || index}>
           <CardComponent
             title={project.name}
             content={project.description}
@@ -37,6 +31,7 @@ const Section3 = () => (
           />
         </Grid>
       ))}
+
       <Grid item xs={12} sx={{ textAlign: "center" }}>
         <Button variant="contained" component={Link} to="/portfolio">
           View More
