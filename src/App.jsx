@@ -17,6 +17,7 @@ const HomePage = React.lazy(() => import("./pages/HomePage"));
 const PortfolioPage = React.lazy(() => import("./pages/PortfolioPage"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 const Fun = React.lazy(() => import("./pages/Fun"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   const [fontLoaded, setFontLoaded] = useState(false);
@@ -69,6 +70,14 @@ const App = () => {
             element={
               <Layout menuItems={menuItems}>
                 <Fun />
+              </Layout>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Layout menuItems={menuItems}>
+                <NotFound />
               </Layout>
             }
           />
