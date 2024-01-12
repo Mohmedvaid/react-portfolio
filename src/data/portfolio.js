@@ -1,13 +1,13 @@
 // data.js
-import shiftImage from "../assets/img/project-images/crShift.png";
-import shakerImage from "../assets/img/project-images/shaker.png";
-import employeeImage from "../assets/img/project-images/employeeManager.png";
-import fetchImage from "../assets/img/project-images/fetch.png";
-import noteImage from "../assets/img/project-images/noteTaker.png";
-import passwordImage from "../assets/img/project-images/passwordGenerator.png";
-import weatherImage from "../assets/img/project-images/weatherApp.png";
-import pantryImage from "../assets/img/project-images/mypantry.png";
-import fitnessImage from "../assets/img/project-images/fitnessTracker.png";
+import shiftImage from "../assets/img/projectImages/crShift.png";
+import shakerImage from "../assets/img/projectImages/shaker.png";
+import employeeImage from "../assets/img/projectImages/employeeManager.png";
+import fetchImage from "../assets/img/projectImages/fetch.png";
+import noteImage from "../assets/img/projectImages/noteTaker.png";
+import passwordImage from "../assets/img/projectImages/passwordGenerator.png";
+import weatherImage from "../assets/img/projectImages/weatherApp.png";
+import pantryImage from "../assets/img/projectImages/mypantry.png";
+import fitnessImage from "../assets/img/projectImages/fitnessTracker.png";
 
 const projects = [
   {

@@ -34,4 +34,4 @@ const isFingerExtended = (joints, landmarks, fingerName) => {
   }
 };
 
-module.exports = analyzeFingers;
+export default analyzeFingers;

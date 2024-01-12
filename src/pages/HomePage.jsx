@@ -2,9 +2,9 @@
 import React from "react";
 
 import Title from "../components/Title";
-import Section1 from "../components/Sections/Section1";
-import Section2 from "../components/Sections/Section2";
-import Section3 from "../components/Sections/Section3";
+import Section1 from "../components/Home/Section1";
+import Section2 from "../components/Home/Section2";
+import Section3 from "../components/Home/Section3";
 
 const HomePage = () => (
   <>

@@ -5,24 +5,24 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
-import ZigzagLine from "../../components/SVG/ZigzagLine";
-import ImageCarousel from "../../components/ImageCarousel";
-import Section from "../../components/Section";
+import ZigzagLine from "../SVG/ZigzagLine";
+import ImageCarousel from "../ImageTicker";
+import Section from "../Section";
 import { section2 } from "../../data/home";
 
-import photoshopIcon from "../../assets/img/ps.png";
-import reactIcon from "../../assets/img/new/react.png";
-import reduxIcon from "../../assets/img/new/redux.png";
-import nodeIcon from "../../assets/img/new/nodejs.png";
-import mongoIcon from "../../assets/img/new/mongo.png";
-import pythonIcon from "../../assets/img/new/python.png";
-import awsIcon from "../../assets/img/new/aws.png";
-import azureIcon from "../../assets/img/new/azure.png";
-import devopsIcon from "../../assets/img/new/devops.webp";
-import linuxIcon from "../../assets/img/new/linux.png";
-import neuralNetworkIcon from "../../assets/img/new/nn.png";
-import machineLearningIcon from "../../assets/img/new/ml.png";
-import jsIcon from "../../assets/img/new/js.png";
+import photoshopIcon from "../../assets/img/tickerImages/ps.png";
+import reactIcon from "../../assets/img/tickerImages/react.png";
+import reduxIcon from "../../assets/img/tickerImages/redux.png";
+import nodeIcon from "../../assets/img/tickerImages/nodejs.png";
+import mongoIcon from "../../assets/img/tickerImages/mongo.png";
+import pythonIcon from "../../assets/img/tickerImages/python.png";
+import awsIcon from "../../assets/img/tickerImages/aws.png";
+import azureIcon from "../../assets/img/tickerImages/azure.png";
+import devopsIcon from "../../assets/img/tickerImages/devops.webp";
+import linuxIcon from "../../assets/img/tickerImages/linux.png";
+import neuralNetworkIcon from "../../assets/img/tickerImages/nn.png";
+import machineLearningIcon from "../../assets/img/tickerImages/ml.png";
+import jsIcon from "../../assets/img/tickerImages/js.png";
 
 const { design, engineering } = section2;
 

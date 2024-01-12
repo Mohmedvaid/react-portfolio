@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-import Section from "../../components/Section";
-import CardComponent from "../../components/CardComponent";
+import Section from "../Section";
+import CardComponent from "../CardComponent";
 import projects from "../../data/portfolio";
 
 const fewProjects = projects.slice(0, 3); //  3 projects

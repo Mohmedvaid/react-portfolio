@@ -1,27 +1,36 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 import Loader from "../Loader";
+import DetectedFingers from "./DetectedFingers";
 import getExtendedFingers from "./getExtendedFingers";
+import getFingerGestureGif from "./getFingerGestureGif";
 
 const styles = {
   root: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    padding: "20px",
+    width: "100%",
   },
   video: {
     transform: "scaleX(-1)",
+    width: "100%",
+    maxHeight: "400px",
     margin: "20px",
   },
   noticeWrapper: {
     textAlign: "center",
-    marginTop: 20,
+    marginTop: 5,
   },
 };
 
@@ -35,6 +44,22 @@ const HandGestureDetection = () => {
   const [isDetectionStarted, setIsDetectionStarted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [detectedFingers, setDetectedFingers] = useState([]);
+  const [currentGifUrl, setCurrentGifUrl] = useState(null);
+
+  const detectedFingersMemo = useMemo(
+    () => detectedFingers,
+    [detectedFingers.join(",")]
+  );
+  const newGifEmbedUrl = useMemo(
+    () => getFingerGestureGif(detectedFingersMemo),
+    [detectedFingersMemo]
+  );
+
+  useEffect(() => {
+    if (newGifEmbedUrl !== currentGifUrl) {
+      setCurrentGifUrl(newGifEmbedUrl);
+    }
+  }, [newGifEmbedUrl, currentGifUrl]);
 
   useEffect(() => {
     const loadModel = async () => {
@@ -83,6 +108,8 @@ const HandGestureDetection = () => {
       if (predictions.length > 0) {
         const fingers = getExtendedFingers(predictions[0].landmarks);
         setDetectedFingers(fingers);
+      } else {
+        setDetectedFingers([]);
       }
       detectionTimeoutRef.current = setTimeout(detect, 2000);
     }
@@ -103,38 +130,45 @@ const HandGestureDetection = () => {
     );
   };
 
-  // Separate component for detected fingers
-  const DetectedFingers = () => {
-    if (!isDetectionStarted) return null;
-    return detectedFingers.length === 0 ? (
-      <Typography gutterBottom>No fingers detected</Typography>
-    ) : (
-      <Typography>{detectedFingers.join(", ")}</Typography>
-    );
-  };
-
   return (
     <Box sx={styles.root}>
-      {!isDetectionStarted && !permissionDenied && (
-        <Button variant="contained" onClick={startVideo}>
-          Start Magic
-        </Button>
-      )}
-      <PermissionNotice />
-      {isLoading && <Loader />}
-      <video ref={videoRef} style={styles.video} hidden={!isDetectionStarted} />
-      <DetectedFingers />
-      {isDetectionStarted && (
-        <Box sx={styles.noticeWrapper}>
-          <Button variant="contained" onClick={stopVideo} gutterBottom>
-            Stop Magic
-          </Button>
-          <Typography variant="subtitle1" gutterBottom>
-            Detection runs every 2 seconds for CPU efficiency. Please be
-            patient.
-          </Typography>
-        </Box>
-      )}
+      <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid item xs={12} md={6} align="center">
+          {!isDetectionStarted && !permissionDenied && (
+            <Button variant="contained" onClick={startVideo}>
+              Start Magic
+            </Button>
+          )}
+          <PermissionNotice />
+          {isLoading && <Loader />}
+          <video
+            ref={videoRef}
+            style={styles.video}
+            hidden={!isDetectionStarted}
+          />
+        </Grid>
+        {isDetectionStarted && (
+          <>
+            <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
+              <>
+                <DetectedFingers
+                  fingers={detectedFingersMemo}
+                  gifUrl={currentGifUrl}
+                />
+              </>
+            </Grid>
+            <Grid item xs={12} sx={styles.noticeWrapper}>
+              <Button variant="contained" onClick={stopVideo}>
+                Stop Magic
+              </Button>
+              <Typography variant="subtitle1" gutterBottom>
+                Detection runs every 2 seconds for CPU efficiency. Please be
+                patient.
+              </Typography>
+            </Grid>
+          </>
+        )}
+      </Grid>
     </Box>
   );
 };

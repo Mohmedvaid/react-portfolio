@@ -13,31 +13,24 @@ import HandGesture from "../components/HandGesture";
 
 const FunPage = () => {
   const [open, setOpen] = useState(true);
-  const handleClickOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
+  const handleToggleDialog = () => setOpen(!open);
 
   return (
     <Box sx={{ height: "100vh" }} component="section" id="fun">
-      <IconButton onClick={handleClickOpen}>
+      <IconButton onClick={handleToggleDialog}>
         <InfoIcon />
       </IconButton>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Hand Gesture Detection"}
-        </DialogTitle>
+      <Dialog open={open} onClose={handleToggleDialog}>
+        <DialogTitle>{"Hand Gesture Detection"}</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+          <DialogContentText>
             This is a fun application to detect hand gestures. No data is
             tracked or saved.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleToggleDialog} color="primary">
             Close
           </Button>
         </DialogActions>

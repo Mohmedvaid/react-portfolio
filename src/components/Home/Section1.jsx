@@ -1,10 +1,10 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 
-import Description from "../../components/Description";
-import ScratchOff from "../../components/ScratchOff";
-import Section from "../../components/Section";
-import FadeIn from "../../components/Animations/FadeInAnimation";
+import Description from "../Description";
+import ScratchOff from "../ScratchOff";
+import Section from "../Section";
+import FadeIn from "../Animations/FadeInAnimation";
 import { scratchOffRevealCode } from "../../data/home";
 
 import topImage from "../../assets/img/me.jpeg";

@@ -114,7 +114,7 @@ function AppMenu({ menuItems }) {
                 onClick={handleCloseNavMenu}
                 component={RouterLink}
                 to={page.path === "/" ? "/" : `/${page.path.toLowerCase()}`}
-                sx={isCta(page) && styles.ctaButton}
+                sx={isCta(page) ? styles.ctaButton : {}}
               >
                 {page.label}
               </MenuItem>
