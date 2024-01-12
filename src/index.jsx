@@ -1,7 +1,7 @@
 // frontend/src/index.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 
@@ -17,10 +17,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // NOTE: strict mode makes double requests should not happen in prod build
 root.render(
   // <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<App />} />
-      </Routes>
-    </BrowserRouter>
+  <HashRouter>
+    <Routes>
+      <Route path="/*" element={<App />} />
+    </Routes>
+  </HashRouter>
   // </React.StrictMode>
 );
