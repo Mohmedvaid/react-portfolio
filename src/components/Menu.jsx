@@ -18,11 +18,13 @@ import logo from "../assets/img/logo.png";
 
 const styles = {
   appBarTransparent: {
-    color: "#000000",
     borderRadius: "50px", // Rounded top
     transition: "all 0.5s ease",
     width: "70%",
     boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.35)",
+    "@media (max-width:600px)": {
+      width: "65%",
+    },
   },
   desktopMenu: {
     flexGrow: 1,
@@ -41,10 +43,11 @@ const styles = {
     justifyContent: "center",
   },
   desktopButton: {
-    fontSize: "1rem", // Larger font size for desktop menu links
+    fontSize: theme.typography.lg,
     margin: "0 10px", // Add some margin for spacing
   },
   ctaButton: {
+    fontSize: theme.typography.lg,
     backgroundColor: theme.palette.cta.main,
     margin: "0 10px",
     "&:hover": {
@@ -53,7 +56,7 @@ const styles = {
   },
 };
 
-function ResponsiveAppBar({ menuItems }) {
+function AppMenu({ menuItems }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const isScrolled = useScrollCheck();
 
@@ -111,6 +114,7 @@ function ResponsiveAppBar({ menuItems }) {
                 onClick={handleCloseNavMenu}
                 component={RouterLink}
                 to={page.path === "/" ? "/" : `/${page.path.toLowerCase()}`}
+                sx={isCta(page) && styles.ctaButton}
               >
                 {page.label}
               </MenuItem>
@@ -125,9 +129,7 @@ function ResponsiveAppBar({ menuItems }) {
                 component={RouterLink}
                 to={page.path === "/" ? "/" : `/${page.path.toLowerCase()}`}
                 sx={
-                  isCta(page)
-                    ? styles.ctaButton
-                    : { ...styles.desktopButton, color: "white" }
+                  isCta(page) ? styles.ctaButton : { ...styles.desktopButton }
                 }
               >
                 {page.label}
@@ -140,4 +142,4 @@ function ResponsiveAppBar({ menuItems }) {
   );
 }
 
-export default ResponsiveAppBar;
+export default AppMenu;

@@ -15,7 +15,7 @@ const TickerContainer = styled(Box)(({ orientation }) => ({
 const Image = styled("img")(({ orientation }) => ({
   height: orientation === "vertical" ? "auto" : "100px",
   width: orientation === "vertical" ? "150px" : "auto",
-  display: "block", // Changed to 'block' to eliminate extra space below images
+  display: "block", 
   margin: orientation === "vertical" ? "50px auto" : "0 30px",
   background: "#fff", // Adding white background
   padding: "10px", // Adding some padding around the image

@@ -4,12 +4,14 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useScrollCheck from "../hooks/useScrollCheck";
 
+import FadeIn from "./Animations/FadeInAnimation";
 import { title } from "../data/home";
 
 const styles = {
   titleContainer: {
     display: "flex",
     justifyContent: "center", // Center container
+    textAlign: "center",
     transition: "transform 0.5s ease", // Smooth transition for moving container
   },
 };
@@ -24,9 +26,11 @@ const Title = () => {
         transform: hasScrolled ? "translateX(-50%)" : "none", // Move left on scroll
       }}
     >
-      <Typography variant="h1" gutterBottom>
-        {title}
-      </Typography>
+      <FadeIn>
+        <Typography variant="h1" gutterBottom>
+          {title}
+        </Typography>
+      </FadeIn>
     </Box>
   );
 };

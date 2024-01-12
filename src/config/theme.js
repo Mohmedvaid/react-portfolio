@@ -20,15 +20,21 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Silkscreen, sans-serif",
+    fontFamily: "Silkscreen, Roboto, sans-serif",
     h1: {
-      fontFamily: "Stalinist One",
+      fontFamily: "Stalinist One, Roboto, sans-serif",
       fontWeight: 700,
       fontSize: "3.5rem",
+      "@media (max-width:600px)": {
+        fontSize: "2.5rem",
+      },
     },
     h2: {
       fontFamily: "Stalinist One",
       fontSize: "2.2rem",
+      "@media (max-width:600px)": {
+        fontSize: "1.8rem",
+      },
     },
     h3: {
       fontSize: "1.8rem",
@@ -38,6 +44,24 @@ const theme = createTheme({
     },
     body1: {
       fontSize: "1rem",
+    },
+    title: {
+      fontSize: "2.7rem",
+    },
+    xl: {
+      fontSize: "1.5rem",
+    },
+    lg: {
+      fontSize: "1.2rem",
+      "@media (max-width:600px)": {
+        fontSize: "1rem",
+      },
+    },
+    md: {
+      fontSize: "1rem",
+    },
+    sm: {
+      fontSize: "0.8rem",
     },
   },
   components: {
@@ -61,4 +85,8 @@ const theme = createTheme({
   },
 });
 
+const fontList = ["Roboto:300,400,500,700", "Stalinist One", "Silkscreen"];
+
 export default theme;
+
+export { fontList };

@@ -15,7 +15,6 @@ import CardWithIcon from "../components/CardWithIcon";
 import FadeInAnimation from "../components/Animations/FadeInAnimation";
 import SlideInAnimation from "../components/Animations/SlideInAnimation";
 import ZoomInAnimation from "../components/Animations/ZoomInAnimation";
-import RotateInAnimation from "../components/Animations/RotateInAnimation";
 
 import { title, contact } from "../data/contact";
 
@@ -58,7 +57,7 @@ const Contact = () => (
         </SlideInAnimation>
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
-        <RotateInAnimation>
+        <FadeInAnimation>
           <CardWithIcon
             icon={<DescriptionIcon fontSize="large" />}
             label="Word Doc Resume (Download)"
@@ -68,7 +67,7 @@ const Contact = () => (
               </Link>
             }
           />
-        </RotateInAnimation>
+        </FadeInAnimation>
       </Grid>
     </Grid>
 

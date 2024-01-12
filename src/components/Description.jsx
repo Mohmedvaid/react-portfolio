@@ -1,39 +1,36 @@
 // src/components/Description.jsx
 import React from "react";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import TypingEffect from "../components/TypingEffect";
 import { description } from "../data/home";
+import theme from "../config/theme";
 
 const styles = {
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    transition: "transform 0.5s ease", // Smooth transition for moving container
-    flexDirection: "column",
-  },
   textTitle: {
     fontWeight: "bold",
-    fontSize: "2.7rem",
+    fontSize: theme.typography.title.fontSize,
     marginBottom: "100px",
     textAlign: "center",
+    '@media (max-width:600px)': {
+      fontSize: theme.typography.h2.fontSize,
+      marginBottom: "50px",
+    },
   },
   description: {
-    fontSize: "1.2rem",
+    fontSize: theme.typography.lg,
     textAlign: "center",
   },
 };
 
 const HomePage = () => {
   return (
-    <Grid item xs={12} md={7} sx={styles.root}>
-      {/* 70% of the screen */}
+    <>
       <TypingEffect variant="h3" sx={styles.textTitle}>
         {description.title}
       </TypingEffect>
       <Typography sx={styles.description}>{description.text}</Typography>
-    </Grid>
+    </>
   );
 };
 

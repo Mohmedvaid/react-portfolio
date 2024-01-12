@@ -16,7 +16,7 @@ const styles = {
     },
   },
   media: {
-    height: 500, // Fixed height for all images
+    height: 300,
     objectFit: "cover", // Cover the area without stretching the image
   },
 };

@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
+import Section from "../../components/Section";
 import CardComponent from "../../components/CardComponent";
 import projects from "../../data/portfolio";
 
-const fewProjects = projects.slice(0, 3); // Assuming you have at least 3 projects
+const fewProjects = projects.slice(0, 3); //  3 projects
 
 const Section3 = () => (
-  <Box component="section" id="portfolio" sx={{ padding: 2 }}>
-    <Grid container spacing={4}>
+  <Section>
+    <Grid container spacing={4} justifyContent="center">
       <Grid item xs={12}>
         <Typography variant="h2" textAlign="center" gutterBottom>
           Portfolio
@@ -21,7 +21,6 @@ const Section3 = () => (
       </Grid>
 
       {fewProjects.map((project, index) => (
-        // Adjusted breakpoints for responsive layout
         <Grid item sm={12} md={6} lg={4} key={project.id || index}>
           <CardComponent
             title={project.name}
@@ -38,7 +37,7 @@ const Section3 = () => (
         </Button>
       </Grid>
     </Grid>
-  </Box>
+  </Section>
 );
 
 export default Section3;
