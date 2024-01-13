@@ -27,7 +27,7 @@ To run the project locally:
 3. Run the app in development mode using `npm start`.
 
 ## Copyright and License
-© [Year] [Your Full Name]. All Rights Reserved.
+© 2024 Mohmed Vaid. All Rights Reserved.
 
 Unauthorized copying of this project, via any medium, is strictly prohibited. Proprietary and confidential.
 
