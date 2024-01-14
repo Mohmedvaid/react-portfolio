@@ -6,7 +6,7 @@ This repository contains the source code for my personal portfolio developed usi
 ## Important Note
 **The portfolio was initially developed in this repository but has been moved to a new repository for hosting on GitHub Pages.**
 
-You can find the live version of the portfolio at: [mohmedvaid.github.io](https:\/\/mohmedvaid.github.io)
+You can find the live version of the portfolio at: [mohmedvaid.github.io](https://mohmedvaid.github.io)
 
 ## Repository for Hosting
 The codebase has been migrated to the following repository for deployment:  
@@ -32,11 +32,11 @@ To run the project locally:
 Unauthorized copying of this project, via any medium, is strictly prohibited. Proprietary and confidential.
 
 ### License
-This project is licensed under the terms of the [MIT license](https:\/\/opensource.org\/licenses\/MIT).
+This project is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Contact
 If you have any questions or comments, please feel free to contact me.
 
 ---
 
-Made with ❤️ by [Mohmed Vaid](https:\/\/github.com\/Mohmedvaid)
+Made with ❤️ by [Mohmed Vaid](https://github.com/Mohmedvaid)
